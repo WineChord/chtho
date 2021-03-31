@@ -1,0 +1,2 @@
+/data/projects/chtho/build/CMakeFiles/edit_cache.dir
+/data/projects/chtho/build/CMakeFiles/rebuild_cache.dir
