@@ -168,6 +168,19 @@ chtho_base/fast:
 .PHONY : chtho_base/fast
 
 #=============================================================================
+# Target rules for targets named chtho_threads
+
+# Build rule for target.
+chtho_threads: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chtho_threads
+.PHONY : chtho_threads
+
+# fast build rule for target.
+chtho_threads/fast:
+	$(MAKE) -f chtho/threads/CMakeFiles/chtho_threads.dir/build.make chtho/threads/CMakeFiles/chtho_threads.dir/build
+.PHONY : chtho_threads/fast
+
+#=============================================================================
 # Target rules for targets named chtho_logging
 
 # Build rule for target.
@@ -219,6 +232,7 @@ help:
 	@echo "... install/local"
 	@echo "... edit_cache"
 	@echo "... chtho_base"
+	@echo "... chtho_threads"
 	@echo "... chtho_logging"
 	@echo "... logger_test"
 	@echo "... chtho_time"

@@ -18,6 +18,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/data/projects/chtho/build/chtho/logging/CMakeFiles/chtho_logging.dir/DependInfo.cmake"
+  "/data/projects/chtho/build/chtho/threads/CMakeFiles/chtho_threads.dir/DependInfo.cmake"
   "/data/projects/chtho/build/chtho/base/CMakeFiles/chtho_base.dir/DependInfo.cmake"
   "/data/projects/chtho/build/chtho/time/CMakeFiles/chtho_time.dir/DependInfo.cmake"
   )

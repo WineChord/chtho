@@ -14,6 +14,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../chtho/base/CMakeLists.txt"
   "../chtho/logging/CMakeLists.txt"
   "../chtho/logging/tests/CMakeLists.txt"
+  "../chtho/threads/CMakeLists.txt"
   "../chtho/time/CMakeLists.txt"
   "/usr/share/cmake-3.5/Modules/CMakeCXXCompiler.cmake.in"
   "/usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp"
@@ -91,6 +92,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.5.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "chtho/base/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "chtho/threads/CMakeFiles/CMakeDirectoryInformation.cmake"
   "chtho/logging/CMakeFiles/CMakeDirectoryInformation.cmake"
   "chtho/logging/tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   "chtho/time/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -99,6 +101,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "chtho/base/CMakeFiles/chtho_base.dir/DependInfo.cmake"
+  "chtho/threads/CMakeFiles/chtho_threads.dir/DependInfo.cmake"
   "chtho/logging/CMakeFiles/chtho_logging.dir/DependInfo.cmake"
   "chtho/logging/tests/CMakeFiles/logger_test.dir/DependInfo.cmake"
   "chtho/time/CMakeFiles/chtho_time.dir/DependInfo.cmake"

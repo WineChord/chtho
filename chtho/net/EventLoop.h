@@ -3,7 +3,7 @@
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
-#include "base/CurrentThread.h"
+#include "threads/CurrentThread.h"
 #include "base/noncopyable.h"
 #include <atomic>
 

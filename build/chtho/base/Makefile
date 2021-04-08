@@ -169,32 +169,32 @@ chtho_base/fast:
 	cd /data/projects/chtho/build && $(MAKE) -f chtho/base/CMakeFiles/chtho_base.dir/build.make chtho/base/CMakeFiles/chtho_base.dir/build
 .PHONY : chtho_base/fast
 
-CurrentThread.o: CurrentThread.cpp.o
+noncopyable.o: noncopyable.cpp.o
 
-.PHONY : CurrentThread.o
+.PHONY : noncopyable.o
 
 # target to build an object file
-CurrentThread.cpp.o:
-	cd /data/projects/chtho/build && $(MAKE) -f chtho/base/CMakeFiles/chtho_base.dir/build.make chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.o
-.PHONY : CurrentThread.cpp.o
+noncopyable.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/base/CMakeFiles/chtho_base.dir/build.make chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.o
+.PHONY : noncopyable.cpp.o
 
-CurrentThread.i: CurrentThread.cpp.i
+noncopyable.i: noncopyable.cpp.i
 
-.PHONY : CurrentThread.i
+.PHONY : noncopyable.i
 
 # target to preprocess a source file
-CurrentThread.cpp.i:
-	cd /data/projects/chtho/build && $(MAKE) -f chtho/base/CMakeFiles/chtho_base.dir/build.make chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.i
-.PHONY : CurrentThread.cpp.i
+noncopyable.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/base/CMakeFiles/chtho_base.dir/build.make chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.i
+.PHONY : noncopyable.cpp.i
 
-CurrentThread.s: CurrentThread.cpp.s
+noncopyable.s: noncopyable.cpp.s
 
-.PHONY : CurrentThread.s
+.PHONY : noncopyable.s
 
 # target to generate assembly for a file
-CurrentThread.cpp.s:
-	cd /data/projects/chtho/build && $(MAKE) -f chtho/base/CMakeFiles/chtho_base.dir/build.make chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.s
-.PHONY : CurrentThread.cpp.s
+noncopyable.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/base/CMakeFiles/chtho_base.dir/build.make chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.s
+.PHONY : noncopyable.cpp.s
 
 # Help Target
 help:
@@ -209,9 +209,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... install/local"
 	@echo "... install/strip"
-	@echo "... CurrentThread.o"
-	@echo "... CurrentThread.i"
-	@echo "... CurrentThread.s"
+	@echo "... noncopyable.o"
+	@echo "... noncopyable.i"
+	@echo "... noncopyable.s"
 .PHONY : help
 
 

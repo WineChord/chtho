@@ -19,6 +19,7 @@ namespace chtho
 __thread pid_t CurrentThread::tid_cached = 0;
 __thread char CurrentThread::tid_str[32] = "";
 __thread int  CurrentThread::tid_len = 6;
+__thread const char* CurrentThread::thread_name = "unknown";
   
 pid_t CurrentThread::tid()
 {

@@ -115,6 +115,61 @@ clean: chtho/base/CMakeFiles/chtho_base.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory chtho/threads
+
+# Convenience name for "all" pass in the directory.
+chtho/threads/all: chtho/threads/CMakeFiles/chtho_threads.dir/all
+
+.PHONY : chtho/threads/all
+
+# Convenience name for "clean" pass in the directory.
+chtho/threads/clean: chtho/threads/CMakeFiles/chtho_threads.dir/clean
+
+.PHONY : chtho/threads/clean
+
+# Convenience name for "preinstall" pass in the directory.
+chtho/threads/preinstall:
+
+.PHONY : chtho/threads/preinstall
+
+#=============================================================================
+# Target rules for target chtho/threads/CMakeFiles/chtho_threads.dir
+
+# All Build rule for target.
+chtho/threads/CMakeFiles/chtho_threads.dir/all:
+	$(MAKE) -f chtho/threads/CMakeFiles/chtho_threads.dir/build.make chtho/threads/CMakeFiles/chtho_threads.dir/depend
+	$(MAKE) -f chtho/threads/CMakeFiles/chtho_threads.dir/build.make chtho/threads/CMakeFiles/chtho_threads.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=9,10,11,12,13 "Built target chtho_threads"
+.PHONY : chtho/threads/CMakeFiles/chtho_threads.dir/all
+
+# Include target in all.
+all: chtho/threads/CMakeFiles/chtho_threads.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+chtho/threads/CMakeFiles/chtho_threads.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/projects/chtho/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 chtho/threads/CMakeFiles/chtho_threads.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/projects/chtho/build/CMakeFiles 0
+.PHONY : chtho/threads/CMakeFiles/chtho_threads.dir/rule
+
+# Convenience name for target.
+chtho_threads: chtho/threads/CMakeFiles/chtho_threads.dir/rule
+
+.PHONY : chtho_threads
+
+# clean rule for target.
+chtho/threads/CMakeFiles/chtho_threads.dir/clean:
+	$(MAKE) -f chtho/threads/CMakeFiles/chtho_threads.dir/build.make chtho/threads/CMakeFiles/chtho_threads.dir/clean
+.PHONY : chtho/threads/CMakeFiles/chtho_threads.dir/clean
+
+# clean rule for target.
+clean: chtho/threads/CMakeFiles/chtho_threads.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory chtho/logging
 
 # Convenience name for "all" pass in the directory.
@@ -195,11 +250,12 @@ chtho/logging/tests/preinstall:
 
 # All Build rule for target.
 chtho/logging/tests/CMakeFiles/logger_test.dir/all: chtho/base/CMakeFiles/chtho_base.dir/all
+chtho/logging/tests/CMakeFiles/logger_test.dir/all: chtho/threads/CMakeFiles/chtho_threads.dir/all
 chtho/logging/tests/CMakeFiles/logger_test.dir/all: chtho/logging/CMakeFiles/chtho_logging.dir/all
 chtho/logging/tests/CMakeFiles/logger_test.dir/all: chtho/time/CMakeFiles/chtho_time.dir/all
 	$(MAKE) -f chtho/logging/tests/CMakeFiles/logger_test.dir/build.make chtho/logging/tests/CMakeFiles/logger_test.dir/depend
 	$(MAKE) -f chtho/logging/tests/CMakeFiles/logger_test.dir/build.make chtho/logging/tests/CMakeFiles/logger_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=12,13 "Built target logger_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=17,18 "Built target logger_test"
 .PHONY : chtho/logging/tests/CMakeFiles/logger_test.dir/all
 
 # Include target in all.
@@ -209,7 +265,7 @@ all: chtho/logging/tests/CMakeFiles/logger_test.dir/all
 
 # Build rule for subdir invocation for target.
 chtho/logging/tests/CMakeFiles/logger_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/projects/chtho/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/projects/chtho/build/CMakeFiles 18
 	$(MAKE) -f CMakeFiles/Makefile2 chtho/logging/tests/CMakeFiles/logger_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /data/projects/chtho/build/CMakeFiles 0
 .PHONY : chtho/logging/tests/CMakeFiles/logger_test.dir/rule
@@ -254,7 +310,7 @@ chtho/time/preinstall:
 chtho/time/CMakeFiles/chtho_time.dir/all:
 	$(MAKE) -f chtho/time/CMakeFiles/chtho_time.dir/build.make chtho/time/CMakeFiles/chtho_time.dir/depend
 	$(MAKE) -f chtho/time/CMakeFiles/chtho_time.dir/build.make chtho/time/CMakeFiles/chtho_time.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=9,10,11 "Built target chtho_time"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=14,15,16 "Built target chtho_time"
 .PHONY : chtho/time/CMakeFiles/chtho_time.dir/all
 
 # Include target in all.

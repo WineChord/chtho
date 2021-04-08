@@ -11,8 +11,8 @@ chtho/logging/CMakeFiles/chtho_logging.dir/LogStream.cpp.o
  /data/projects/chtho/chtho/logging/LogStream.cpp
  /data/projects/chtho/chtho/logging/LogStream.h
 chtho/logging/CMakeFiles/chtho_logging.dir/Logger.cpp.o
- ../chtho/base/CurrentThread.h
  ../chtho/base/noncopyable.h
+ ../chtho/threads/CurrentThread.h
  ../chtho/time/TimeZone.h
  ../chtho/time/Timestamp.h
  /data/projects/chtho/chtho/logging/FixedBuffer.h

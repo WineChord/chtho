@@ -11,6 +11,13 @@
 /data/projects/chtho/build/chtho/base/CMakeFiles/edit_cache.dir
 /data/projects/chtho/build/chtho/base/CMakeFiles/install/local.dir
 /data/projects/chtho/build/chtho/base/CMakeFiles/install/strip.dir
+/data/projects/chtho/build/chtho/threads/CMakeFiles/rebuild_cache.dir
+/data/projects/chtho/build/chtho/threads/CMakeFiles/install.dir
+/data/projects/chtho/build/chtho/threads/CMakeFiles/list_install_components.dir
+/data/projects/chtho/build/chtho/threads/CMakeFiles/chtho_threads.dir
+/data/projects/chtho/build/chtho/threads/CMakeFiles/install/local.dir
+/data/projects/chtho/build/chtho/threads/CMakeFiles/install/strip.dir
+/data/projects/chtho/build/chtho/threads/CMakeFiles/edit_cache.dir
 /data/projects/chtho/build/chtho/logging/CMakeFiles/install.dir
 /data/projects/chtho/build/chtho/logging/CMakeFiles/list_install_components.dir
 /data/projects/chtho/build/chtho/logging/CMakeFiles/rebuild_cache.dir

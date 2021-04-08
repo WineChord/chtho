@@ -5,8 +5,15 @@ chtho/logging/tests/CMakeFiles/logger_test.dir/Logger_test.cpp.o: .././chtho/log
 chtho/logging/tests/CMakeFiles/logger_test.dir/Logger_test.cpp.o: .././chtho/logging/LogStream.h
 chtho/logging/tests/CMakeFiles/logger_test.dir/Logger_test.cpp.o: .././chtho/logging/Logger.h
 chtho/logging/tests/CMakeFiles/logger_test.dir/Logger_test.cpp.o: .././chtho/logging/SourceFile.h
+chtho/logging/tests/CMakeFiles/logger_test.dir/Logger_test.cpp.o: .././chtho/threads/ThreadPool.h
 chtho/logging/tests/CMakeFiles/logger_test.dir/Logger_test.cpp.o: .././chtho/time/TimeZone.h
 chtho/logging/tests/CMakeFiles/logger_test.dir/Logger_test.cpp.o: ../chtho/base/noncopyable.h
+chtho/logging/tests/CMakeFiles/logger_test.dir/Logger_test.cpp.o: ../chtho/threads/Condition.h
+chtho/logging/tests/CMakeFiles/logger_test.dir/Logger_test.cpp.o: ../chtho/threads/CountDownLatch.h
+chtho/logging/tests/CMakeFiles/logger_test.dir/Logger_test.cpp.o: ../chtho/threads/CurrentThread.h
+chtho/logging/tests/CMakeFiles/logger_test.dir/Logger_test.cpp.o: ../chtho/threads/MutexLock.h
+chtho/logging/tests/CMakeFiles/logger_test.dir/Logger_test.cpp.o: ../chtho/threads/RevokeGuard.h
+chtho/logging/tests/CMakeFiles/logger_test.dir/Logger_test.cpp.o: ../chtho/threads/Thread.h
 chtho/logging/tests/CMakeFiles/logger_test.dir/Logger_test.cpp.o: ../chtho/time/TimeZone.h
 chtho/logging/tests/CMakeFiles/logger_test.dir/Logger_test.cpp.o: ../chtho/time/Timestamp.h
 chtho/logging/tests/CMakeFiles/logger_test.dir/Logger_test.cpp.o: ../chtho/logging/tests/Logger_test.cpp

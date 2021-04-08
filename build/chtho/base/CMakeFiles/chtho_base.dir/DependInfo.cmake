@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/data/projects/chtho/chtho/base/CurrentThread.cpp" "/data/projects/chtho/build/chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.o"
+  "/data/projects/chtho/chtho/base/noncopyable.cpp" "/data/projects/chtho/build/chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -57,38 +57,38 @@ include chtho/base/CMakeFiles/chtho_base.dir/progress.make
 # Include the compile flags for this target's objects.
 include chtho/base/CMakeFiles/chtho_base.dir/flags.make
 
-chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.o: chtho/base/CMakeFiles/chtho_base.dir/flags.make
-chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.o: ../chtho/base/CurrentThread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.o"
-	cd /data/projects/chtho/build/chtho/base && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_base.dir/CurrentThread.cpp.o -c /data/projects/chtho/chtho/base/CurrentThread.cpp
+chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.o: chtho/base/CMakeFiles/chtho_base.dir/flags.make
+chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.o: ../chtho/base/noncopyable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.o"
+	cd /data/projects/chtho/build/chtho/base && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_base.dir/noncopyable.cpp.o -c /data/projects/chtho/chtho/base/noncopyable.cpp
 
-chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chtho_base.dir/CurrentThread.cpp.i"
-	cd /data/projects/chtho/build/chtho/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/projects/chtho/chtho/base/CurrentThread.cpp > CMakeFiles/chtho_base.dir/CurrentThread.cpp.i
+chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chtho_base.dir/noncopyable.cpp.i"
+	cd /data/projects/chtho/build/chtho/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/projects/chtho/chtho/base/noncopyable.cpp > CMakeFiles/chtho_base.dir/noncopyable.cpp.i
 
-chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chtho_base.dir/CurrentThread.cpp.s"
-	cd /data/projects/chtho/build/chtho/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/projects/chtho/chtho/base/CurrentThread.cpp -o CMakeFiles/chtho_base.dir/CurrentThread.cpp.s
+chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chtho_base.dir/noncopyable.cpp.s"
+	cd /data/projects/chtho/build/chtho/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/projects/chtho/chtho/base/noncopyable.cpp -o CMakeFiles/chtho_base.dir/noncopyable.cpp.s
 
-chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.o.requires:
+chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.o.requires:
 
-.PHONY : chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.o.requires
+.PHONY : chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.o.requires
 
-chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.o.provides: chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.o.requires
-	$(MAKE) -f chtho/base/CMakeFiles/chtho_base.dir/build.make chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.o.provides.build
-.PHONY : chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.o.provides
+chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.o.provides: chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.o.requires
+	$(MAKE) -f chtho/base/CMakeFiles/chtho_base.dir/build.make chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.o.provides.build
+.PHONY : chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.o.provides
 
-chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.o.provides.build: chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.o
+chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.o.provides.build: chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.o
 
 
 # Object files for target chtho_base
 chtho_base_OBJECTS = \
-"CMakeFiles/chtho_base.dir/CurrentThread.cpp.o"
+"CMakeFiles/chtho_base.dir/noncopyable.cpp.o"
 
 # External object files for target chtho_base
 chtho_base_EXTERNAL_OBJECTS =
 
-lib/libchtho_base.a: chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.o
+lib/libchtho_base.a: chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.o
 lib/libchtho_base.a: chtho/base/CMakeFiles/chtho_base.dir/build.make
 lib/libchtho_base.a: chtho/base/CMakeFiles/chtho_base.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../lib/libchtho_base.a"
@@ -100,7 +100,7 @@ chtho/base/CMakeFiles/chtho_base.dir/build: lib/libchtho_base.a
 
 .PHONY : chtho/base/CMakeFiles/chtho_base.dir/build
 
-chtho/base/CMakeFiles/chtho_base.dir/requires: chtho/base/CMakeFiles/chtho_base.dir/CurrentThread.cpp.o.requires
+chtho/base/CMakeFiles/chtho_base.dir/requires: chtho/base/CMakeFiles/chtho_base.dir/noncopyable.cpp.o.requires
 
 .PHONY : chtho/base/CMakeFiles/chtho_base.dir/requires
 

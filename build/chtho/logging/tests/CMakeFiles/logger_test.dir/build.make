@@ -91,6 +91,7 @@ logger_test_EXTERNAL_OBJECTS =
 bin/logger_test: chtho/logging/tests/CMakeFiles/logger_test.dir/Logger_test.cpp.o
 bin/logger_test: chtho/logging/tests/CMakeFiles/logger_test.dir/build.make
 bin/logger_test: lib/libchtho_logging.a
+bin/logger_test: lib/libchtho_threads.a
 bin/logger_test: lib/libchtho_base.a
 bin/logger_test: lib/libchtho_time.a
 bin/logger_test: chtho/logging/tests/CMakeFiles/logger_test.dir/link.txt

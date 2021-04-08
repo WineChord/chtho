@@ -1,6 +1,0 @@
-20210408 09:48:02.93718731095 INFO  hello Logger_test.cpp:12
-20210408 09:48:02.93725631095 WARN  world Logger_test.cpp:13
-20210408 09:48:02.93725731095 [1;31mERROR[0m error Logger_test.cpp:14
-20210408 09:48:02.93725731095 INFO  sizeof(Logger)=4056 Logger_test.cpp:15
-20210408 09:48:02.93725831095 INFO  sizeof(LogStream)=4024 Logger_test.cpp:16
-20210408 09:48:02.93725831095 INFO  sizeof(Buffer)=4016 Logger_test.cpp:17

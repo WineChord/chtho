@@ -10,8 +10,8 @@ chtho/logging/CMakeFiles/chtho_logging.dir/LogStream.cpp.o: ../chtho/logging/Fix
 chtho/logging/CMakeFiles/chtho_logging.dir/LogStream.cpp.o: ../chtho/logging/LogStream.cpp
 chtho/logging/CMakeFiles/chtho_logging.dir/LogStream.cpp.o: ../chtho/logging/LogStream.h
 
-chtho/logging/CMakeFiles/chtho_logging.dir/Logger.cpp.o: ../chtho/base/CurrentThread.h
 chtho/logging/CMakeFiles/chtho_logging.dir/Logger.cpp.o: ../chtho/base/noncopyable.h
+chtho/logging/CMakeFiles/chtho_logging.dir/Logger.cpp.o: ../chtho/threads/CurrentThread.h
 chtho/logging/CMakeFiles/chtho_logging.dir/Logger.cpp.o: ../chtho/time/TimeZone.h
 chtho/logging/CMakeFiles/chtho_logging.dir/Logger.cpp.o: ../chtho/time/Timestamp.h
 chtho/logging/CMakeFiles/chtho_logging.dir/Logger.cpp.o: ../chtho/logging/FixedBuffer.h

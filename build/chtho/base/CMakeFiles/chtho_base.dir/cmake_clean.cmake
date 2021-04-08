@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/chtho_base.dir/CurrentThread.cpp.o"
+  "CMakeFiles/chtho_base.dir/noncopyable.cpp.o"
   "../../lib/libchtho_base.pdb"
   "../../lib/libchtho_base.a"
 )

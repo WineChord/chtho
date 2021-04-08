@@ -41,6 +41,7 @@ include_directories(chtho)
 message(STATUS "CXX_FLAGS = " ${CMAKE_CXX_FLAGS} " " ${CMAKE_CXX_FLAGS_${BUILD_TYPE}})
 
 add_subdirectory(chtho/base)
+add_subdirectory(chtho/threads)
 add_subdirectory(chtho/logging)
 add_subdirectory(chtho/time)
 

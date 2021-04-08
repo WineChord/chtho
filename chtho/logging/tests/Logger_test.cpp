@@ -5,8 +5,15 @@
 
 #include "chtho/logging/Logger.h"
 #include "chtho/time/TimeZone.h"
+#include "chtho/threads/ThreadPool.h"
 
 #include <unistd.h> // sleep
+
+void logInThread()
+{
+  LOG_INFO << "logInThread";
+  usleep(1000); // sleep 1ms
+}
 
 int main()
 {
@@ -32,5 +39,15 @@ int main()
   LOG_WARN << "world UTC";
   LOG_ERR << "err UTC";
 
+  chtho::ThreadPool pool("pool");
+  // LOG_INFO << "pool succeed";
+  pool.start(5);
+  pool.run(logInThread);
+  pool.run(logInThread);
+  pool.run(logInThread);
+  pool.run(logInThread);
+  pool.run(logInThread);
+
+  sleep(2);
   return 0;
 }

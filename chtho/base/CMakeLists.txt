@@ -1,5 +1,6 @@
 set(base_SRCS
-  CurrentThread.cpp
+  # CurrentThread.cpp
+  noncopyable.cpp
 )
 
 add_library(chtho_base ${base_SRCS})

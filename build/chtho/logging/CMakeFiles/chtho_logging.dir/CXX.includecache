@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-../chtho/base/CurrentThread.h
+../chtho/base/noncopyable.h
+
+../chtho/threads/CurrentThread.h
 pthread.h
 -
-
-../chtho/base/noncopyable.h
 
 ../chtho/time/TimeZone.h
 memory
@@ -61,8 +61,8 @@ algorithm
 /data/projects/chtho/chtho/logging/Logger.cpp
 Logger.h
 /data/projects/chtho/chtho/logging/Logger.h
-base/CurrentThread.h
-/data/projects/chtho/chtho/logging/base/CurrentThread.h
+threads/CurrentThread.h
+/data/projects/chtho/chtho/logging/threads/CurrentThread.h
 time/TimeZone.h
 /data/projects/chtho/chtho/logging/time/TimeZone.h
 stdlib.h

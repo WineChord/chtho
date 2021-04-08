@@ -35,6 +35,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/data/projects/chtho/build/chtho/base/cmake_install.cmake")
+  include("/data/projects/chtho/build/chtho/threads/cmake_install.cmake")
   include("/data/projects/chtho/build/chtho/logging/cmake_install.cmake")
   include("/data/projects/chtho/build/chtho/time/cmake_install.cmake")
 

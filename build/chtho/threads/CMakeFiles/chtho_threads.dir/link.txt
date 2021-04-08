@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libchtho_threads.a  CMakeFiles/chtho_threads.dir/CountDownLatch.cpp.o CMakeFiles/chtho_threads.dir/CurrentThread.cpp.o CMakeFiles/chtho_threads.dir/Thread.cpp.o CMakeFiles/chtho_threads.dir/ThreadPool.cpp.o
+/usr/bin/ranlib ../../lib/libchtho_threads.a

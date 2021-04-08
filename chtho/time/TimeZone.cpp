@@ -14,7 +14,7 @@ namespace chtho
 struct tm TimeZone::toLocal(time_t secsSinceE) const
 {
   struct tm local;
-  memset(&local, sizeof(local), 0);
+  memset(&local, 0, sizeof(local));
   time_t localSecs = secsSinceE + gmtOff_;
   ::gmtime_r(&localSecs, &local);
   // local.tm_isdst = xxx; // dst means day light saving time, I don't care.

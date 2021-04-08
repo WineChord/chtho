@@ -17,8 +17,10 @@ class Logger
 public:
   enum class Level { TRACE, DEBUG, INFO, WARN, ERR, FATAL, NUM_LEVEL };
   // alias for output func, which will be called at ~Logger 
-  typedef void (*OutputFunc)(const char* str, int len);
-  typedef void (*FlushFunc)();
+  // always prefer alias declarations to typedefs.
+  // see Effective Modern C++ Item 9. 
+  using OutputFunc =  void (*)(const char* str, int len);
+  using FlushFunc = void (*)();
   static OutputFunc output;
   static FlushFunc flush; 
   static TimeZone timeZone;
