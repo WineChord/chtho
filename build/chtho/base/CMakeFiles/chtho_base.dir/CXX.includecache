@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/data/projects/chtho/chtho/base/CurrentThread.cpp
+CurrentThread.h
+/data/projects/chtho/chtho/base/CurrentThread.h
+cstdio
+-
+sys/syscall.h
+-
+unistd.h
+-
+
+/data/projects/chtho/chtho/base/CurrentThread.h
+pthread.h
+-
+

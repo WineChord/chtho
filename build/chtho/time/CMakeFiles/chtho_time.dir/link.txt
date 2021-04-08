@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libchtho_time.a  CMakeFiles/chtho_time.dir/Timestamp.cpp.o CMakeFiles/chtho_time.dir/TimeZone.cpp.o
+/usr/bin/ranlib ../../lib/libchtho_time.a
