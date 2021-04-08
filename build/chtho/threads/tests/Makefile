@@ -89,16 +89,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : install/strip/fast
+.PHONY : edit_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -111,27 +111,27 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target install/strip
+install/strip/fast: install/strip
 
-.PHONY : edit_cache/fast
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/projects/chtho/build/CMakeFiles /data/projects/chtho/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /data/projects/chtho/build && $(CMAKE_COMMAND) -E cmake_progress_start /data/projects/chtho/build/CMakeFiles /data/projects/chtho/build/chtho/threads/tests/CMakeFiles/progress.marks
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/threads/tests/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /data/projects/chtho/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/threads/tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,96 +141,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/threads/tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/threads/tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /data/projects/chtho/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named chtho_base
+# Convenience name for target.
+chtho/threads/tests/CMakeFiles/threadpool_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/threads/tests/CMakeFiles/threadpool_test.dir/rule
+.PHONY : chtho/threads/tests/CMakeFiles/threadpool_test.dir/rule
 
-# Build rule for target.
-chtho_base: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 chtho_base
-.PHONY : chtho_base
+# Convenience name for target.
+threadpool_test: chtho/threads/tests/CMakeFiles/threadpool_test.dir/rule
 
-# fast build rule for target.
-chtho_base/fast:
-	$(MAKE) -f chtho/base/CMakeFiles/chtho_base.dir/build.make chtho/base/CMakeFiles/chtho_base.dir/build
-.PHONY : chtho_base/fast
-
-#=============================================================================
-# Target rules for targets named chtho_threads
-
-# Build rule for target.
-chtho_threads: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 chtho_threads
-.PHONY : chtho_threads
-
-# fast build rule for target.
-chtho_threads/fast:
-	$(MAKE) -f chtho/threads/CMakeFiles/chtho_threads.dir/build.make chtho/threads/CMakeFiles/chtho_threads.dir/build
-.PHONY : chtho_threads/fast
-
-#=============================================================================
-# Target rules for targets named threadpool_test
-
-# Build rule for target.
-threadpool_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 threadpool_test
 .PHONY : threadpool_test
 
 # fast build rule for target.
 threadpool_test/fast:
-	$(MAKE) -f chtho/threads/tests/CMakeFiles/threadpool_test.dir/build.make chtho/threads/tests/CMakeFiles/threadpool_test.dir/build
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/threads/tests/CMakeFiles/threadpool_test.dir/build.make chtho/threads/tests/CMakeFiles/threadpool_test.dir/build
 .PHONY : threadpool_test/fast
 
-#=============================================================================
-# Target rules for targets named chtho_logging
+ThreadPool_test.o: ThreadPool_test.cpp.o
 
-# Build rule for target.
-chtho_logging: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 chtho_logging
-.PHONY : chtho_logging
+.PHONY : ThreadPool_test.o
 
-# fast build rule for target.
-chtho_logging/fast:
-	$(MAKE) -f chtho/logging/CMakeFiles/chtho_logging.dir/build.make chtho/logging/CMakeFiles/chtho_logging.dir/build
-.PHONY : chtho_logging/fast
+# target to build an object file
+ThreadPool_test.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/threads/tests/CMakeFiles/threadpool_test.dir/build.make chtho/threads/tests/CMakeFiles/threadpool_test.dir/ThreadPool_test.cpp.o
+.PHONY : ThreadPool_test.cpp.o
 
-#=============================================================================
-# Target rules for targets named logger_test
+ThreadPool_test.i: ThreadPool_test.cpp.i
 
-# Build rule for target.
-logger_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 logger_test
-.PHONY : logger_test
+.PHONY : ThreadPool_test.i
 
-# fast build rule for target.
-logger_test/fast:
-	$(MAKE) -f chtho/logging/tests/CMakeFiles/logger_test.dir/build.make chtho/logging/tests/CMakeFiles/logger_test.dir/build
-.PHONY : logger_test/fast
+# target to preprocess a source file
+ThreadPool_test.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/threads/tests/CMakeFiles/threadpool_test.dir/build.make chtho/threads/tests/CMakeFiles/threadpool_test.dir/ThreadPool_test.cpp.i
+.PHONY : ThreadPool_test.cpp.i
 
-#=============================================================================
-# Target rules for targets named chtho_time
+ThreadPool_test.s: ThreadPool_test.cpp.s
 
-# Build rule for target.
-chtho_time: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 chtho_time
-.PHONY : chtho_time
+.PHONY : ThreadPool_test.s
 
-# fast build rule for target.
-chtho_time/fast:
-	$(MAKE) -f chtho/time/CMakeFiles/chtho_time.dir/build.make chtho/time/CMakeFiles/chtho_time.dir/build
-.PHONY : chtho_time/fast
+# target to generate assembly for a file
+ThreadPool_test.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/threads/tests/CMakeFiles/threadpool_test.dir/build.make chtho/threads/tests/CMakeFiles/threadpool_test.dir/ThreadPool_test.cpp.s
+.PHONY : ThreadPool_test.cpp.s
 
 # Help Target
 help:
@@ -241,15 +205,13 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... edit_cache"
-	@echo "... chtho_base"
-	@echo "... chtho_threads"
 	@echo "... threadpool_test"
-	@echo "... chtho_logging"
-	@echo "... logger_test"
-	@echo "... chtho_time"
+	@echo "... edit_cache"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... ThreadPool_test.o"
+	@echo "... ThreadPool_test.i"
+	@echo "... ThreadPool_test.s"
 .PHONY : help
 
 
@@ -261,6 +223,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /data/projects/chtho/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

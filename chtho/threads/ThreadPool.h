@@ -55,6 +55,10 @@ public:
   void start(int numThreads);
   void stop();
   void run(Task task);
+  void setMaxQueueSz(int maxSize) { maxQueueSz_ = maxSize; }
+  void setThreadInitCB(const Task& cb) { threadInitCB = cb; }
+  const std::string& name() const { return name_; }
+  size_t queueSz() const;
 };
 } // namespace chtho
 

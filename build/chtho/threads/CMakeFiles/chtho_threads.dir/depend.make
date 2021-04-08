@@ -7,9 +7,11 @@ chtho/threads/CMakeFiles/chtho_threads.dir/CountDownLatch.cpp.o: ../chtho/thread
 chtho/threads/CMakeFiles/chtho_threads.dir/CountDownLatch.cpp.o: ../chtho/threads/MutexLock.h
 chtho/threads/CMakeFiles/chtho_threads.dir/CountDownLatch.cpp.o: ../chtho/threads/MutexLockGuard.h
 chtho/threads/CMakeFiles/chtho_threads.dir/CountDownLatch.cpp.o: ../chtho/threads/RevokeGuard.h
+chtho/threads/CMakeFiles/chtho_threads.dir/CountDownLatch.cpp.o: ../chtho/time/Timestamp.h
 chtho/threads/CMakeFiles/chtho_threads.dir/CountDownLatch.cpp.o: ../chtho/threads/CountDownLatch.cpp
 chtho/threads/CMakeFiles/chtho_threads.dir/CountDownLatch.cpp.o: ../chtho/threads/CountDownLatch.h
 
+chtho/threads/CMakeFiles/chtho_threads.dir/CurrentThread.cpp.o: ../chtho/time/Timestamp.h
 chtho/threads/CMakeFiles/chtho_threads.dir/CurrentThread.cpp.o: ../chtho/threads/CurrentThread.cpp
 chtho/threads/CMakeFiles/chtho_threads.dir/CurrentThread.cpp.o: ../chtho/threads/CurrentThread.h
 
@@ -38,6 +40,7 @@ chtho/threads/CMakeFiles/chtho_threads.dir/ThreadPool.cpp.o: ../chtho/threads/Mu
 chtho/threads/CMakeFiles/chtho_threads.dir/ThreadPool.cpp.o: ../chtho/threads/MutexLockGuard.h
 chtho/threads/CMakeFiles/chtho_threads.dir/ThreadPool.cpp.o: ../chtho/threads/RevokeGuard.h
 chtho/threads/CMakeFiles/chtho_threads.dir/ThreadPool.cpp.o: ../chtho/threads/Thread.h
+chtho/threads/CMakeFiles/chtho_threads.dir/ThreadPool.cpp.o: ../chtho/time/Timestamp.h
 chtho/threads/CMakeFiles/chtho_threads.dir/ThreadPool.cpp.o: ../chtho/threads/ThreadPool.cpp
 chtho/threads/CMakeFiles/chtho_threads.dir/ThreadPool.cpp.o: ../chtho/threads/ThreadPool.h
 

@@ -69,6 +69,12 @@ threads/MutexLock.h
 ../chtho/threads/CurrentThread.h
 pthread.h
 -
+time/Timestamp.h
+../chtho/threads/time/Timestamp.h
+stdint.h
+-
+time.h
+-
 
 ../chtho/threads/MutexLock.h
 base/noncopyable.h
@@ -140,6 +146,12 @@ unistd.h
 
 /data/projects/chtho/chtho/threads/CurrentThread.h
 pthread.h
+-
+time/Timestamp.h
+/data/projects/chtho/chtho/threads/time/Timestamp.h
+stdint.h
+-
+time.h
 -
 
 /data/projects/chtho/chtho/threads/Thread.cpp

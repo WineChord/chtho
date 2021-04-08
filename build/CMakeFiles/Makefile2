@@ -119,16 +119,18 @@ clean: chtho/base/CMakeFiles/chtho_base.dir/clean
 
 # Convenience name for "all" pass in the directory.
 chtho/threads/all: chtho/threads/CMakeFiles/chtho_threads.dir/all
+chtho/threads/all: chtho/threads/tests/all
 
 .PHONY : chtho/threads/all
 
 # Convenience name for "clean" pass in the directory.
 chtho/threads/clean: chtho/threads/CMakeFiles/chtho_threads.dir/clean
+chtho/threads/clean: chtho/threads/tests/clean
 
 .PHONY : chtho/threads/clean
 
 # Convenience name for "preinstall" pass in the directory.
-chtho/threads/preinstall:
+chtho/threads/preinstall: chtho/threads/tests/preinstall
 
 .PHONY : chtho/threads/preinstall
 
@@ -166,6 +168,64 @@ chtho/threads/CMakeFiles/chtho_threads.dir/clean:
 
 # clean rule for target.
 clean: chtho/threads/CMakeFiles/chtho_threads.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory chtho/threads/tests
+
+# Convenience name for "all" pass in the directory.
+chtho/threads/tests/all: chtho/threads/tests/CMakeFiles/threadpool_test.dir/all
+
+.PHONY : chtho/threads/tests/all
+
+# Convenience name for "clean" pass in the directory.
+chtho/threads/tests/clean: chtho/threads/tests/CMakeFiles/threadpool_test.dir/clean
+
+.PHONY : chtho/threads/tests/clean
+
+# Convenience name for "preinstall" pass in the directory.
+chtho/threads/tests/preinstall:
+
+.PHONY : chtho/threads/tests/preinstall
+
+#=============================================================================
+# Target rules for target chtho/threads/tests/CMakeFiles/threadpool_test.dir
+
+# All Build rule for target.
+chtho/threads/tests/CMakeFiles/threadpool_test.dir/all: chtho/base/CMakeFiles/chtho_base.dir/all
+chtho/threads/tests/CMakeFiles/threadpool_test.dir/all: chtho/threads/CMakeFiles/chtho_threads.dir/all
+chtho/threads/tests/CMakeFiles/threadpool_test.dir/all: chtho/logging/CMakeFiles/chtho_logging.dir/all
+chtho/threads/tests/CMakeFiles/threadpool_test.dir/all: chtho/time/CMakeFiles/chtho_time.dir/all
+	$(MAKE) -f chtho/threads/tests/CMakeFiles/threadpool_test.dir/build.make chtho/threads/tests/CMakeFiles/threadpool_test.dir/depend
+	$(MAKE) -f chtho/threads/tests/CMakeFiles/threadpool_test.dir/build.make chtho/threads/tests/CMakeFiles/threadpool_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=19,20 "Built target threadpool_test"
+.PHONY : chtho/threads/tests/CMakeFiles/threadpool_test.dir/all
+
+# Include target in all.
+all: chtho/threads/tests/CMakeFiles/threadpool_test.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+chtho/threads/tests/CMakeFiles/threadpool_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/projects/chtho/build/CMakeFiles 18
+	$(MAKE) -f CMakeFiles/Makefile2 chtho/threads/tests/CMakeFiles/threadpool_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/projects/chtho/build/CMakeFiles 0
+.PHONY : chtho/threads/tests/CMakeFiles/threadpool_test.dir/rule
+
+# Convenience name for target.
+threadpool_test: chtho/threads/tests/CMakeFiles/threadpool_test.dir/rule
+
+.PHONY : threadpool_test
+
+# clean rule for target.
+chtho/threads/tests/CMakeFiles/threadpool_test.dir/clean:
+	$(MAKE) -f chtho/threads/tests/CMakeFiles/threadpool_test.dir/build.make chtho/threads/tests/CMakeFiles/threadpool_test.dir/clean
+.PHONY : chtho/threads/tests/CMakeFiles/threadpool_test.dir/clean
+
+# clean rule for target.
+clean: chtho/threads/tests/CMakeFiles/threadpool_test.dir/clean
 
 .PHONY : clean
 

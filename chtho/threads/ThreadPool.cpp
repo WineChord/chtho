@@ -58,6 +58,7 @@ void ThreadPool::stop()
     // while loops and reach the end
     // (one inside take(), one inside runInLoop())
     notEmpty_.notifyAll();
+    notFull_.notifyAll();
   }
   for(auto& t : threads_)
     t->join();
@@ -148,5 +149,11 @@ void ThreadPool::run(Task task)
     // it will wake up one of the threads blocking inside 
     // ThreadPool::take
   }
+}
+
+size_t ThreadPool::queueSz() const
+{
+  MutexLockGuard lock(mutex_);
+  return queue_.size();
 }
 } // namespace chtho

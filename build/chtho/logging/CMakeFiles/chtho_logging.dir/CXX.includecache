@@ -11,6 +11,12 @@
 ../chtho/threads/CurrentThread.h
 pthread.h
 -
+time/Timestamp.h
+../chtho/threads/time/Timestamp.h
+stdint.h
+-
+time.h
+-
 
 ../chtho/time/TimeZone.h
 memory
