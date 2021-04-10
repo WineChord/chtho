@@ -38,6 +38,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/data/projects/chtho/build/chtho/threads/cmake_install.cmake")
   include("/data/projects/chtho/build/chtho/logging/cmake_install.cmake")
   include("/data/projects/chtho/build/chtho/time/cmake_install.cmake")
+  include("/data/projects/chtho/build/chtho/net/cmake_install.cmake")
 
 endif()
 

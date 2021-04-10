@@ -23,5 +23,14 @@ Timestamp Timestamp::now()
   int64_t secs = tv.tv_sec;
   return Timestamp(secs * usPerSec + tv.tv_usec);
 }
+
+std::string Timestamp::toString() const 
+{
+  char buf[32] = {0};
+  int64_t secs = secsSinceE();
+  int64_t uss = us();
+  snprintf(buf, sizeof(buf), "%ld.%06ld", secs, uss);
+  return buf;
+}
   
 } // namespace chtho

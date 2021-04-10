@@ -46,3 +46,17 @@
 /data/projects/chtho/build/chtho/time/CMakeFiles/chtho_time.dir
 /data/projects/chtho/build/chtho/time/CMakeFiles/install/strip.dir
 /data/projects/chtho/build/chtho/time/CMakeFiles/edit_cache.dir
+/data/projects/chtho/build/chtho/net/CMakeFiles/install.dir
+/data/projects/chtho/build/chtho/net/CMakeFiles/list_install_components.dir
+/data/projects/chtho/build/chtho/net/CMakeFiles/rebuild_cache.dir
+/data/projects/chtho/build/chtho/net/CMakeFiles/chtho_net.dir
+/data/projects/chtho/build/chtho/net/CMakeFiles/install/local.dir
+/data/projects/chtho/build/chtho/net/CMakeFiles/install/strip.dir
+/data/projects/chtho/build/chtho/net/CMakeFiles/edit_cache.dir
+/data/projects/chtho/build/chtho/net/tests/CMakeFiles/rebuild_cache.dir
+/data/projects/chtho/build/chtho/net/tests/CMakeFiles/install.dir
+/data/projects/chtho/build/chtho/net/tests/CMakeFiles/list_install_components.dir
+/data/projects/chtho/build/chtho/net/tests/CMakeFiles/eventloop_test.dir
+/data/projects/chtho/build/chtho/net/tests/CMakeFiles/edit_cache.dir
+/data/projects/chtho/build/chtho/net/tests/CMakeFiles/install/local.dir
+/data/projects/chtho/build/chtho/net/tests/CMakeFiles/install/strip.dir

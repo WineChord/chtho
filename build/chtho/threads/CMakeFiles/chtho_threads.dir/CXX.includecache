@@ -119,6 +119,8 @@ stdint.h
 -
 time.h
 -
+string
+-
 
 /data/projects/chtho/chtho/threads/CountDownLatch.cpp
 CountDownLatch.h

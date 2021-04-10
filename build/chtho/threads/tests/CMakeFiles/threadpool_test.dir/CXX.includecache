@@ -153,6 +153,8 @@ stdint.h
 -
 time.h
 -
+string
+-
 
 /data/projects/chtho/chtho/threads/tests/ThreadPool_test.cpp
 chtho/threads/ThreadPool.h

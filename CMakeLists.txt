@@ -44,5 +44,6 @@ add_subdirectory(chtho/base)
 add_subdirectory(chtho/threads)
 add_subdirectory(chtho/logging)
 add_subdirectory(chtho/time)
+add_subdirectory(chtho/net)
 
 # add_subdirectory(chtho)

@@ -141,7 +141,7 @@ chtho/threads/preinstall: chtho/threads/tests/preinstall
 chtho/threads/CMakeFiles/chtho_threads.dir/all:
 	$(MAKE) -f chtho/threads/CMakeFiles/chtho_threads.dir/build.make chtho/threads/CMakeFiles/chtho_threads.dir/depend
 	$(MAKE) -f chtho/threads/CMakeFiles/chtho_threads.dir/build.make chtho/threads/CMakeFiles/chtho_threads.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=9,10,11,12,13 "Built target chtho_threads"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=17,18,19,20,21 "Built target chtho_threads"
 .PHONY : chtho/threads/CMakeFiles/chtho_threads.dir/all
 
 # Include target in all.
@@ -199,7 +199,7 @@ chtho/threads/tests/CMakeFiles/threadpool_test.dir/all: chtho/logging/CMakeFiles
 chtho/threads/tests/CMakeFiles/threadpool_test.dir/all: chtho/time/CMakeFiles/chtho_time.dir/all
 	$(MAKE) -f chtho/threads/tests/CMakeFiles/threadpool_test.dir/build.make chtho/threads/tests/CMakeFiles/threadpool_test.dir/depend
 	$(MAKE) -f chtho/threads/tests/CMakeFiles/threadpool_test.dir/build.make chtho/threads/tests/CMakeFiles/threadpool_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=19,20 "Built target threadpool_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=29,30 "Built target threadpool_test"
 .PHONY : chtho/threads/tests/CMakeFiles/threadpool_test.dir/all
 
 # Include target in all.
@@ -315,7 +315,7 @@ chtho/logging/tests/CMakeFiles/logger_test.dir/all: chtho/logging/CMakeFiles/cht
 chtho/logging/tests/CMakeFiles/logger_test.dir/all: chtho/time/CMakeFiles/chtho_time.dir/all
 	$(MAKE) -f chtho/logging/tests/CMakeFiles/logger_test.dir/build.make chtho/logging/tests/CMakeFiles/logger_test.dir/depend
 	$(MAKE) -f chtho/logging/tests/CMakeFiles/logger_test.dir/build.make chtho/logging/tests/CMakeFiles/logger_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=17,18 "Built target logger_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=27,28 "Built target logger_test"
 .PHONY : chtho/logging/tests/CMakeFiles/logger_test.dir/all
 
 # Include target in all.
@@ -370,7 +370,7 @@ chtho/time/preinstall:
 chtho/time/CMakeFiles/chtho_time.dir/all:
 	$(MAKE) -f chtho/time/CMakeFiles/chtho_time.dir/build.make chtho/time/CMakeFiles/chtho_time.dir/depend
 	$(MAKE) -f chtho/time/CMakeFiles/chtho_time.dir/build.make chtho/time/CMakeFiles/chtho_time.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=14,15,16 "Built target chtho_time"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=22,23,24 "Built target chtho_time"
 .PHONY : chtho/time/CMakeFiles/chtho_time.dir/all
 
 # Include target in all.
@@ -397,6 +397,125 @@ chtho/time/CMakeFiles/chtho_time.dir/clean:
 
 # clean rule for target.
 clean: chtho/time/CMakeFiles/chtho_time.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory chtho/net
+
+# Convenience name for "all" pass in the directory.
+chtho/net/all: chtho/net/CMakeFiles/chtho_net.dir/all
+chtho/net/all: chtho/net/tests/all
+
+.PHONY : chtho/net/all
+
+# Convenience name for "clean" pass in the directory.
+chtho/net/clean: chtho/net/CMakeFiles/chtho_net.dir/clean
+chtho/net/clean: chtho/net/tests/clean
+
+.PHONY : chtho/net/clean
+
+# Convenience name for "preinstall" pass in the directory.
+chtho/net/preinstall: chtho/net/tests/preinstall
+
+.PHONY : chtho/net/preinstall
+
+#=============================================================================
+# Target rules for target chtho/net/CMakeFiles/chtho_net.dir
+
+# All Build rule for target.
+chtho/net/CMakeFiles/chtho_net.dir/all: chtho/base/CMakeFiles/chtho_base.dir/all
+chtho/net/CMakeFiles/chtho_net.dir/all: chtho/threads/CMakeFiles/chtho_threads.dir/all
+chtho/net/CMakeFiles/chtho_net.dir/all: chtho/logging/CMakeFiles/chtho_logging.dir/all
+chtho/net/CMakeFiles/chtho_net.dir/all: chtho/time/CMakeFiles/chtho_time.dir/all
+	$(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/depend
+	$(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=9,10,11,12,13,14,15,16 "Built target chtho_net"
+.PHONY : chtho/net/CMakeFiles/chtho_net.dir/all
+
+# Include target in all.
+all: chtho/net/CMakeFiles/chtho_net.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+chtho/net/CMakeFiles/chtho_net.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/projects/chtho/build/CMakeFiles 24
+	$(MAKE) -f CMakeFiles/Makefile2 chtho/net/CMakeFiles/chtho_net.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/projects/chtho/build/CMakeFiles 0
+.PHONY : chtho/net/CMakeFiles/chtho_net.dir/rule
+
+# Convenience name for target.
+chtho_net: chtho/net/CMakeFiles/chtho_net.dir/rule
+
+.PHONY : chtho_net
+
+# clean rule for target.
+chtho/net/CMakeFiles/chtho_net.dir/clean:
+	$(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/clean
+.PHONY : chtho/net/CMakeFiles/chtho_net.dir/clean
+
+# clean rule for target.
+clean: chtho/net/CMakeFiles/chtho_net.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory chtho/net/tests
+
+# Convenience name for "all" pass in the directory.
+chtho/net/tests/all: chtho/net/tests/CMakeFiles/eventloop_test.dir/all
+
+.PHONY : chtho/net/tests/all
+
+# Convenience name for "clean" pass in the directory.
+chtho/net/tests/clean: chtho/net/tests/CMakeFiles/eventloop_test.dir/clean
+
+.PHONY : chtho/net/tests/clean
+
+# Convenience name for "preinstall" pass in the directory.
+chtho/net/tests/preinstall:
+
+.PHONY : chtho/net/tests/preinstall
+
+#=============================================================================
+# Target rules for target chtho/net/tests/CMakeFiles/eventloop_test.dir
+
+# All Build rule for target.
+chtho/net/tests/CMakeFiles/eventloop_test.dir/all: chtho/base/CMakeFiles/chtho_base.dir/all
+chtho/net/tests/CMakeFiles/eventloop_test.dir/all: chtho/threads/CMakeFiles/chtho_threads.dir/all
+chtho/net/tests/CMakeFiles/eventloop_test.dir/all: chtho/logging/CMakeFiles/chtho_logging.dir/all
+chtho/net/tests/CMakeFiles/eventloop_test.dir/all: chtho/time/CMakeFiles/chtho_time.dir/all
+chtho/net/tests/CMakeFiles/eventloop_test.dir/all: chtho/net/CMakeFiles/chtho_net.dir/all
+	$(MAKE) -f chtho/net/tests/CMakeFiles/eventloop_test.dir/build.make chtho/net/tests/CMakeFiles/eventloop_test.dir/depend
+	$(MAKE) -f chtho/net/tests/CMakeFiles/eventloop_test.dir/build.make chtho/net/tests/CMakeFiles/eventloop_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=25,26 "Built target eventloop_test"
+.PHONY : chtho/net/tests/CMakeFiles/eventloop_test.dir/all
+
+# Include target in all.
+all: chtho/net/tests/CMakeFiles/eventloop_test.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+chtho/net/tests/CMakeFiles/eventloop_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/projects/chtho/build/CMakeFiles 26
+	$(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/eventloop_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/projects/chtho/build/CMakeFiles 0
+.PHONY : chtho/net/tests/CMakeFiles/eventloop_test.dir/rule
+
+# Convenience name for target.
+eventloop_test: chtho/net/tests/CMakeFiles/eventloop_test.dir/rule
+
+.PHONY : eventloop_test
+
+# clean rule for target.
+chtho/net/tests/CMakeFiles/eventloop_test.dir/clean:
+	$(MAKE) -f chtho/net/tests/CMakeFiles/eventloop_test.dir/build.make chtho/net/tests/CMakeFiles/eventloop_test.dir/clean
+.PHONY : chtho/net/tests/CMakeFiles/eventloop_test.dir/clean
+
+# clean rule for target.
+clean: chtho/net/tests/CMakeFiles/eventloop_test.dir/clean
 
 .PHONY : clean
 

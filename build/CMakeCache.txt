@@ -159,6 +159,9 @@ chtho_base_LIB_DEPENDS:STATIC=general;pthread;
 chtho_logging_LIB_DEPENDS:STATIC=general;chtho_base;general;chtho_time;
 
 //Dependencies for the target
+chtho_net_LIB_DEPENDS:STATIC=general;chtho_logging;general;chtho_threads;
+
+//Dependencies for the target
 chtho_threads_LIB_DEPENDS:STATIC=general;pthread;
 
 //Dependencies for target
@@ -243,7 +246,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

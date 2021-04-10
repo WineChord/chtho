@@ -232,6 +232,32 @@ chtho_time/fast:
 	$(MAKE) -f chtho/time/CMakeFiles/chtho_time.dir/build.make chtho/time/CMakeFiles/chtho_time.dir/build
 .PHONY : chtho_time/fast
 
+#=============================================================================
+# Target rules for targets named chtho_net
+
+# Build rule for target.
+chtho_net: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chtho_net
+.PHONY : chtho_net
+
+# fast build rule for target.
+chtho_net/fast:
+	$(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/build
+.PHONY : chtho_net/fast
+
+#=============================================================================
+# Target rules for targets named eventloop_test
+
+# Build rule for target.
+eventloop_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eventloop_test
+.PHONY : eventloop_test
+
+# fast build rule for target.
+eventloop_test/fast:
+	$(MAKE) -f chtho/net/tests/CMakeFiles/eventloop_test.dir/build.make chtho/net/tests/CMakeFiles/eventloop_test.dir/build
+.PHONY : eventloop_test/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -250,6 +276,8 @@ help:
 	@echo "... chtho_logging"
 	@echo "... logger_test"
 	@echo "... chtho_time"
+	@echo "... chtho_net"
+	@echo "... eventloop_test"
 .PHONY : help
 
 
