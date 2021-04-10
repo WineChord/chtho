@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/data/projects/chtho/chtho/net/Buffer.cpp" "/data/projects/chtho/build/chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.o"
   "/data/projects/chtho/chtho/net/Channel.cpp" "/data/projects/chtho/build/chtho/net/CMakeFiles/chtho_net.dir/Channel.cpp.o"
   "/data/projects/chtho/chtho/net/EventLoop.cpp" "/data/projects/chtho/build/chtho/net/CMakeFiles/chtho_net.dir/EventLoop.cpp.o"
   "/data/projects/chtho/chtho/net/EventLoopThread.cpp" "/data/projects/chtho/build/chtho/net/CMakeFiles/chtho_net.dir/EventLoopThread.cpp.o"

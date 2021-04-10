@@ -169,6 +169,33 @@ chtho_net/fast:
 	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/build
 .PHONY : chtho_net/fast
 
+Buffer.o: Buffer.cpp.o
+
+.PHONY : Buffer.o
+
+# target to build an object file
+Buffer.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.o
+.PHONY : Buffer.cpp.o
+
+Buffer.i: Buffer.cpp.i
+
+.PHONY : Buffer.i
+
+# target to preprocess a source file
+Buffer.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.i
+.PHONY : Buffer.cpp.i
+
+Buffer.s: Buffer.cpp.s
+
+.PHONY : Buffer.s
+
+# target to generate assembly for a file
+Buffer.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.s
+.PHONY : Buffer.cpp.s
+
 Channel.o: Channel.cpp.o
 
 .PHONY : Channel.o
@@ -479,6 +506,9 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... edit_cache"
+	@echo "... Buffer.o"
+	@echo "... Buffer.i"
+	@echo "... Buffer.s"
 	@echo "... Channel.o"
 	@echo "... Channel.i"
 	@echo "... Channel.s"

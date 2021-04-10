@@ -57,9 +57,33 @@ include chtho/net/CMakeFiles/chtho_net.dir/progress.make
 # Include the compile flags for this target's objects.
 include chtho/net/CMakeFiles/chtho_net.dir/flags.make
 
+chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.o: chtho/net/CMakeFiles/chtho_net.dir/flags.make
+chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.o: ../chtho/net/Buffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.o"
+	cd /data/projects/chtho/build/chtho/net && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_net.dir/Buffer.cpp.o -c /data/projects/chtho/chtho/net/Buffer.cpp
+
+chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chtho_net.dir/Buffer.cpp.i"
+	cd /data/projects/chtho/build/chtho/net && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/projects/chtho/chtho/net/Buffer.cpp > CMakeFiles/chtho_net.dir/Buffer.cpp.i
+
+chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chtho_net.dir/Buffer.cpp.s"
+	cd /data/projects/chtho/build/chtho/net && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/projects/chtho/chtho/net/Buffer.cpp -o CMakeFiles/chtho_net.dir/Buffer.cpp.s
+
+chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.o.requires:
+
+.PHONY : chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.o.requires
+
+chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.o.provides: chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.o.requires
+	$(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.o.provides.build
+.PHONY : chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.o.provides
+
+chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.o.provides.build: chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.o
+
+
 chtho/net/CMakeFiles/chtho_net.dir/Channel.cpp.o: chtho/net/CMakeFiles/chtho_net.dir/flags.make
 chtho/net/CMakeFiles/chtho_net.dir/Channel.cpp.o: ../chtho/net/Channel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/Channel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/Channel.cpp.o"
 	cd /data/projects/chtho/build/chtho/net && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_net.dir/Channel.cpp.o -c /data/projects/chtho/chtho/net/Channel.cpp
 
 chtho/net/CMakeFiles/chtho_net.dir/Channel.cpp.i: cmake_force
@@ -83,7 +107,7 @@ chtho/net/CMakeFiles/chtho_net.dir/Channel.cpp.o.provides.build: chtho/net/CMake
 
 chtho/net/CMakeFiles/chtho_net.dir/EventLoop.cpp.o: chtho/net/CMakeFiles/chtho_net.dir/flags.make
 chtho/net/CMakeFiles/chtho_net.dir/EventLoop.cpp.o: ../chtho/net/EventLoop.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/EventLoop.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/EventLoop.cpp.o"
 	cd /data/projects/chtho/build/chtho/net && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_net.dir/EventLoop.cpp.o -c /data/projects/chtho/chtho/net/EventLoop.cpp
 
 chtho/net/CMakeFiles/chtho_net.dir/EventLoop.cpp.i: cmake_force
@@ -107,7 +131,7 @@ chtho/net/CMakeFiles/chtho_net.dir/EventLoop.cpp.o.provides.build: chtho/net/CMa
 
 chtho/net/CMakeFiles/chtho_net.dir/EventLoopThread.cpp.o: chtho/net/CMakeFiles/chtho_net.dir/flags.make
 chtho/net/CMakeFiles/chtho_net.dir/EventLoopThread.cpp.o: ../chtho/net/EventLoopThread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/EventLoopThread.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/EventLoopThread.cpp.o"
 	cd /data/projects/chtho/build/chtho/net && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_net.dir/EventLoopThread.cpp.o -c /data/projects/chtho/chtho/net/EventLoopThread.cpp
 
 chtho/net/CMakeFiles/chtho_net.dir/EventLoopThread.cpp.i: cmake_force
@@ -131,7 +155,7 @@ chtho/net/CMakeFiles/chtho_net.dir/EventLoopThread.cpp.o.provides.build: chtho/n
 
 chtho/net/CMakeFiles/chtho_net.dir/EventLoopThreadPool.cpp.o: chtho/net/CMakeFiles/chtho_net.dir/flags.make
 chtho/net/CMakeFiles/chtho_net.dir/EventLoopThreadPool.cpp.o: ../chtho/net/EventLoopThreadPool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/EventLoopThreadPool.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/EventLoopThreadPool.cpp.o"
 	cd /data/projects/chtho/build/chtho/net && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_net.dir/EventLoopThreadPool.cpp.o -c /data/projects/chtho/chtho/net/EventLoopThreadPool.cpp
 
 chtho/net/CMakeFiles/chtho_net.dir/EventLoopThreadPool.cpp.i: cmake_force
@@ -155,7 +179,7 @@ chtho/net/CMakeFiles/chtho_net.dir/EventLoopThreadPool.cpp.o.provides.build: cht
 
 chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.o: chtho/net/CMakeFiles/chtho_net.dir/flags.make
 chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.o: ../chtho/net/InetAddr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.o"
 	cd /data/projects/chtho/build/chtho/net && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_net.dir/InetAddr.cpp.o -c /data/projects/chtho/chtho/net/InetAddr.cpp
 
 chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.i: cmake_force
@@ -179,7 +203,7 @@ chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.o.provides.build: chtho/net/CMak
 
 chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.o: chtho/net/CMakeFiles/chtho_net.dir/flags.make
 chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.o: ../chtho/net/Socket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.o"
 	cd /data/projects/chtho/build/chtho/net && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_net.dir/Socket.cpp.o -c /data/projects/chtho/chtho/net/Socket.cpp
 
 chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.i: cmake_force
@@ -203,7 +227,7 @@ chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.o.provides.build: chtho/net/CMakeF
 
 chtho/net/CMakeFiles/chtho_net.dir/Timer.cpp.o: chtho/net/CMakeFiles/chtho_net.dir/flags.make
 chtho/net/CMakeFiles/chtho_net.dir/Timer.cpp.o: ../chtho/net/Timer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/Timer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/Timer.cpp.o"
 	cd /data/projects/chtho/build/chtho/net && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_net.dir/Timer.cpp.o -c /data/projects/chtho/chtho/net/Timer.cpp
 
 chtho/net/CMakeFiles/chtho_net.dir/Timer.cpp.i: cmake_force
@@ -227,7 +251,7 @@ chtho/net/CMakeFiles/chtho_net.dir/Timer.cpp.o.provides.build: chtho/net/CMakeFi
 
 chtho/net/CMakeFiles/chtho_net.dir/TimerQueue.cpp.o: chtho/net/CMakeFiles/chtho_net.dir/flags.make
 chtho/net/CMakeFiles/chtho_net.dir/TimerQueue.cpp.o: ../chtho/net/TimerQueue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/TimerQueue.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/TimerQueue.cpp.o"
 	cd /data/projects/chtho/build/chtho/net && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_net.dir/TimerQueue.cpp.o -c /data/projects/chtho/chtho/net/TimerQueue.cpp
 
 chtho/net/CMakeFiles/chtho_net.dir/TimerQueue.cpp.i: cmake_force
@@ -251,7 +275,7 @@ chtho/net/CMakeFiles/chtho_net.dir/TimerQueue.cpp.o.provides.build: chtho/net/CM
 
 chtho/net/CMakeFiles/chtho_net.dir/poller/EPoll.cpp.o: chtho/net/CMakeFiles/chtho_net.dir/flags.make
 chtho/net/CMakeFiles/chtho_net.dir/poller/EPoll.cpp.o: ../chtho/net/poller/EPoll.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/poller/EPoll.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/poller/EPoll.cpp.o"
 	cd /data/projects/chtho/build/chtho/net && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_net.dir/poller/EPoll.cpp.o -c /data/projects/chtho/chtho/net/poller/EPoll.cpp
 
 chtho/net/CMakeFiles/chtho_net.dir/poller/EPoll.cpp.i: cmake_force
@@ -275,7 +299,7 @@ chtho/net/CMakeFiles/chtho_net.dir/poller/EPoll.cpp.o.provides.build: chtho/net/
 
 chtho/net/CMakeFiles/chtho_net.dir/poller/Poll.cpp.o: chtho/net/CMakeFiles/chtho_net.dir/flags.make
 chtho/net/CMakeFiles/chtho_net.dir/poller/Poll.cpp.o: ../chtho/net/poller/Poll.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/poller/Poll.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/poller/Poll.cpp.o"
 	cd /data/projects/chtho/build/chtho/net && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_net.dir/poller/Poll.cpp.o -c /data/projects/chtho/chtho/net/poller/Poll.cpp
 
 chtho/net/CMakeFiles/chtho_net.dir/poller/Poll.cpp.i: cmake_force
@@ -299,7 +323,7 @@ chtho/net/CMakeFiles/chtho_net.dir/poller/Poll.cpp.o.provides.build: chtho/net/C
 
 chtho/net/CMakeFiles/chtho_net.dir/poller/Poller.cpp.o: chtho/net/CMakeFiles/chtho_net.dir/flags.make
 chtho/net/CMakeFiles/chtho_net.dir/poller/Poller.cpp.o: ../chtho/net/poller/Poller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/poller/Poller.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object chtho/net/CMakeFiles/chtho_net.dir/poller/Poller.cpp.o"
 	cd /data/projects/chtho/build/chtho/net && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_net.dir/poller/Poller.cpp.o -c /data/projects/chtho/chtho/net/poller/Poller.cpp
 
 chtho/net/CMakeFiles/chtho_net.dir/poller/Poller.cpp.i: cmake_force
@@ -323,6 +347,7 @@ chtho/net/CMakeFiles/chtho_net.dir/poller/Poller.cpp.o.provides.build: chtho/net
 
 # Object files for target chtho_net
 chtho_net_OBJECTS = \
+"CMakeFiles/chtho_net.dir/Buffer.cpp.o" \
 "CMakeFiles/chtho_net.dir/Channel.cpp.o" \
 "CMakeFiles/chtho_net.dir/EventLoop.cpp.o" \
 "CMakeFiles/chtho_net.dir/EventLoopThread.cpp.o" \
@@ -338,6 +363,7 @@ chtho_net_OBJECTS = \
 # External object files for target chtho_net
 chtho_net_EXTERNAL_OBJECTS =
 
+lib/libchtho_net.a: chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.o
 lib/libchtho_net.a: chtho/net/CMakeFiles/chtho_net.dir/Channel.cpp.o
 lib/libchtho_net.a: chtho/net/CMakeFiles/chtho_net.dir/EventLoop.cpp.o
 lib/libchtho_net.a: chtho/net/CMakeFiles/chtho_net.dir/EventLoopThread.cpp.o
@@ -351,7 +377,7 @@ lib/libchtho_net.a: chtho/net/CMakeFiles/chtho_net.dir/poller/Poll.cpp.o
 lib/libchtho_net.a: chtho/net/CMakeFiles/chtho_net.dir/poller/Poller.cpp.o
 lib/libchtho_net.a: chtho/net/CMakeFiles/chtho_net.dir/build.make
 lib/libchtho_net.a: chtho/net/CMakeFiles/chtho_net.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library ../../lib/libchtho_net.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX static library ../../lib/libchtho_net.a"
 	cd /data/projects/chtho/build/chtho/net && $(CMAKE_COMMAND) -P CMakeFiles/chtho_net.dir/cmake_clean_target.cmake
 	cd /data/projects/chtho/build/chtho/net && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/chtho_net.dir/link.txt --verbose=$(VERBOSE)
 
@@ -360,6 +386,7 @@ chtho/net/CMakeFiles/chtho_net.dir/build: lib/libchtho_net.a
 
 .PHONY : chtho/net/CMakeFiles/chtho_net.dir/build
 
+chtho/net/CMakeFiles/chtho_net.dir/requires: chtho/net/CMakeFiles/chtho_net.dir/Buffer.cpp.o.requires
 chtho/net/CMakeFiles/chtho_net.dir/requires: chtho/net/CMakeFiles/chtho_net.dir/Channel.cpp.o.requires
 chtho/net/CMakeFiles/chtho_net.dir/requires: chtho/net/CMakeFiles/chtho_net.dir/EventLoop.cpp.o.requires
 chtho/net/CMakeFiles/chtho_net.dir/requires: chtho/net/CMakeFiles/chtho_net.dir/EventLoopThread.cpp.o.requires

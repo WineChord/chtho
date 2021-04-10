@@ -56,50 +56,6 @@ CMAKE_BINARY_DIR = /data/projects/chtho/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -112,6 +68,17 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -121,6 +88,39 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -155,49 +155,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-chtho/net/tests/CMakeFiles/channel_test.dir/rule:
-	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/channel_test.dir/rule
-.PHONY : chtho/net/tests/CMakeFiles/channel_test.dir/rule
+chtho/net/tests/CMakeFiles/inetaddr_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/inetaddr_test.dir/rule
+.PHONY : chtho/net/tests/CMakeFiles/inetaddr_test.dir/rule
 
 # Convenience name for target.
-channel_test: chtho/net/tests/CMakeFiles/channel_test.dir/rule
+inetaddr_test: chtho/net/tests/CMakeFiles/inetaddr_test.dir/rule
 
-.PHONY : channel_test
+.PHONY : inetaddr_test
 
 # fast build rule for target.
-channel_test/fast:
-	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/channel_test.dir/build.make chtho/net/tests/CMakeFiles/channel_test.dir/build
-.PHONY : channel_test/fast
-
-# Convenience name for target.
-chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule:
-	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule
-.PHONY : chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule
-
-# Convenience name for target.
-eventloopthreadpool_test: chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule
-
-.PHONY : eventloopthreadpool_test
-
-# fast build rule for target.
-eventloopthreadpool_test/fast:
-	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build
-.PHONY : eventloopthreadpool_test/fast
-
-# Convenience name for target.
-chtho/net/tests/CMakeFiles/eventloop_test.dir/rule:
-	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/eventloop_test.dir/rule
-.PHONY : chtho/net/tests/CMakeFiles/eventloop_test.dir/rule
-
-# Convenience name for target.
-eventloop_test: chtho/net/tests/CMakeFiles/eventloop_test.dir/rule
-
-.PHONY : eventloop_test
-
-# fast build rule for target.
-eventloop_test/fast:
-	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloop_test.dir/build.make chtho/net/tests/CMakeFiles/eventloop_test.dir/build
-.PHONY : eventloop_test/fast
+inetaddr_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/inetaddr_test.dir/build.make chtho/net/tests/CMakeFiles/inetaddr_test.dir/build
+.PHONY : inetaddr_test/fast
 
 # Convenience name for target.
 chtho/net/tests/CMakeFiles/eventloopthread_test.dir/rule:
@@ -215,19 +185,91 @@ eventloopthread_test/fast:
 .PHONY : eventloopthread_test/fast
 
 # Convenience name for target.
-chtho/net/tests/CMakeFiles/inetaddr_test.dir/rule:
-	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/inetaddr_test.dir/rule
-.PHONY : chtho/net/tests/CMakeFiles/inetaddr_test.dir/rule
+chtho/net/tests/CMakeFiles/eventloop_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/eventloop_test.dir/rule
+.PHONY : chtho/net/tests/CMakeFiles/eventloop_test.dir/rule
 
 # Convenience name for target.
-inetaddr_test: chtho/net/tests/CMakeFiles/inetaddr_test.dir/rule
+eventloop_test: chtho/net/tests/CMakeFiles/eventloop_test.dir/rule
 
-.PHONY : inetaddr_test
+.PHONY : eventloop_test
 
 # fast build rule for target.
-inetaddr_test/fast:
-	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/inetaddr_test.dir/build.make chtho/net/tests/CMakeFiles/inetaddr_test.dir/build
-.PHONY : inetaddr_test/fast
+eventloop_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloop_test.dir/build.make chtho/net/tests/CMakeFiles/eventloop_test.dir/build
+.PHONY : eventloop_test/fast
+
+# Convenience name for target.
+chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule
+.PHONY : chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule
+
+# Convenience name for target.
+eventloopthreadpool_test: chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule
+
+.PHONY : eventloopthreadpool_test
+
+# fast build rule for target.
+eventloopthreadpool_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build
+.PHONY : eventloopthreadpool_test/fast
+
+# Convenience name for target.
+chtho/net/tests/CMakeFiles/channel_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/channel_test.dir/rule
+.PHONY : chtho/net/tests/CMakeFiles/channel_test.dir/rule
+
+# Convenience name for target.
+channel_test: chtho/net/tests/CMakeFiles/channel_test.dir/rule
+
+.PHONY : channel_test
+
+# fast build rule for target.
+channel_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/channel_test.dir/build.make chtho/net/tests/CMakeFiles/channel_test.dir/build
+.PHONY : channel_test/fast
+
+# Convenience name for target.
+chtho/net/tests/CMakeFiles/buffer_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/buffer_test.dir/rule
+.PHONY : chtho/net/tests/CMakeFiles/buffer_test.dir/rule
+
+# Convenience name for target.
+buffer_test: chtho/net/tests/CMakeFiles/buffer_test.dir/rule
+
+.PHONY : buffer_test
+
+# fast build rule for target.
+buffer_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/buffer_test.dir/build.make chtho/net/tests/CMakeFiles/buffer_test.dir/build
+.PHONY : buffer_test/fast
+
+Buffer_test.o: Buffer_test.cpp.o
+
+.PHONY : Buffer_test.o
+
+# target to build an object file
+Buffer_test.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/buffer_test.dir/build.make chtho/net/tests/CMakeFiles/buffer_test.dir/Buffer_test.cpp.o
+.PHONY : Buffer_test.cpp.o
+
+Buffer_test.i: Buffer_test.cpp.i
+
+.PHONY : Buffer_test.i
+
+# target to preprocess a source file
+Buffer_test.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/buffer_test.dir/build.make chtho/net/tests/CMakeFiles/buffer_test.dir/Buffer_test.cpp.i
+.PHONY : Buffer_test.cpp.i
+
+Buffer_test.s: Buffer_test.cpp.s
+
+.PHONY : Buffer_test.s
+
+# target to generate assembly for a file
+Buffer_test.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/buffer_test.dir/build.make chtho/net/tests/CMakeFiles/buffer_test.dir/Buffer_test.cpp.s
+.PHONY : Buffer_test.cpp.s
 
 Channel_test.o: Channel_test.cpp.o
 
@@ -370,17 +412,21 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... rebuild_cache"
-	@echo "... channel_test"
-	@echo "... eventloopthreadpool_test"
 	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... eventloop_test"
-	@echo "... eventloopthread_test"
 	@echo "... inetaddr_test"
+	@echo "... eventloopthread_test"
+	@echo "... eventloop_test"
+	@echo "... eventloopthreadpool_test"
+	@echo "... channel_test"
+	@echo "... rebuild_cache"
+	@echo "... buffer_test"
+	@echo "... list_install_components"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... edit_cache"
+	@echo "... Buffer_test.o"
+	@echo "... Buffer_test.i"
+	@echo "... Buffer_test.s"
 	@echo "... Channel_test.o"
 	@echo "... Channel_test.i"
 	@echo "... Channel_test.s"
