@@ -3,6 +3,8 @@ set(net_SRCS
   EventLoop.cpp
   EventLoopThread.cpp
   EventLoopThreadPool.cpp
+  InetAddr.cpp  
+  Socket.cpp
   Timer.cpp
   TimerQueue.cpp
   poller/EPoll.cpp

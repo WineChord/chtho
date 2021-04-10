@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/chtho_net.dir/EventLoop.cpp.o"
   "CMakeFiles/chtho_net.dir/EventLoopThread.cpp.o"
   "CMakeFiles/chtho_net.dir/EventLoopThreadPool.cpp.o"
+  "CMakeFiles/chtho_net.dir/InetAddr.cpp.o"
+  "CMakeFiles/chtho_net.dir/Socket.cpp.o"
   "CMakeFiles/chtho_net.dir/Timer.cpp.o"
   "CMakeFiles/chtho_net.dir/TimerQueue.cpp.o"
   "CMakeFiles/chtho_net.dir/poller/EPoll.cpp.o"

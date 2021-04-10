@@ -277,6 +277,60 @@ EventLoopThreadPool.cpp.s:
 	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/EventLoopThreadPool.cpp.s
 .PHONY : EventLoopThreadPool.cpp.s
 
+InetAddr.o: InetAddr.cpp.o
+
+.PHONY : InetAddr.o
+
+# target to build an object file
+InetAddr.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.o
+.PHONY : InetAddr.cpp.o
+
+InetAddr.i: InetAddr.cpp.i
+
+.PHONY : InetAddr.i
+
+# target to preprocess a source file
+InetAddr.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.i
+.PHONY : InetAddr.cpp.i
+
+InetAddr.s: InetAddr.cpp.s
+
+.PHONY : InetAddr.s
+
+# target to generate assembly for a file
+InetAddr.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.s
+.PHONY : InetAddr.cpp.s
+
+Socket.o: Socket.cpp.o
+
+.PHONY : Socket.o
+
+# target to build an object file
+Socket.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.o
+.PHONY : Socket.cpp.o
+
+Socket.i: Socket.cpp.i
+
+.PHONY : Socket.i
+
+# target to preprocess a source file
+Socket.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.i
+.PHONY : Socket.cpp.i
+
+Socket.s: Socket.cpp.s
+
+.PHONY : Socket.s
+
+# target to generate assembly for a file
+Socket.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.s
+.PHONY : Socket.cpp.s
+
 Timer.o: Timer.cpp.o
 
 .PHONY : Timer.o
@@ -437,6 +491,12 @@ help:
 	@echo "... EventLoopThreadPool.o"
 	@echo "... EventLoopThreadPool.i"
 	@echo "... EventLoopThreadPool.s"
+	@echo "... InetAddr.o"
+	@echo "... InetAddr.i"
+	@echo "... InetAddr.s"
+	@echo "... Socket.o"
+	@echo "... Socket.i"
+	@echo "... Socket.s"
 	@echo "... Timer.o"
 	@echo "... Timer.i"
 	@echo "... Timer.s"

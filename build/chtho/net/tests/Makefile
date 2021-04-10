@@ -155,21 +155,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule:
-	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule
-.PHONY : chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule
-
-# Convenience name for target.
-eventloopthreadpool_test: chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule
-
-.PHONY : eventloopthreadpool_test
-
-# fast build rule for target.
-eventloopthreadpool_test/fast:
-	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build
-.PHONY : eventloopthreadpool_test/fast
-
-# Convenience name for target.
 chtho/net/tests/CMakeFiles/channel_test.dir/rule:
 	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/channel_test.dir/rule
 .PHONY : chtho/net/tests/CMakeFiles/channel_test.dir/rule
@@ -183,6 +168,21 @@ channel_test: chtho/net/tests/CMakeFiles/channel_test.dir/rule
 channel_test/fast:
 	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/channel_test.dir/build.make chtho/net/tests/CMakeFiles/channel_test.dir/build
 .PHONY : channel_test/fast
+
+# Convenience name for target.
+chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule
+.PHONY : chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule
+
+# Convenience name for target.
+eventloopthreadpool_test: chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule
+
+.PHONY : eventloopthreadpool_test
+
+# fast build rule for target.
+eventloopthreadpool_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build
+.PHONY : eventloopthreadpool_test/fast
 
 # Convenience name for target.
 chtho/net/tests/CMakeFiles/eventloop_test.dir/rule:
@@ -213,6 +213,21 @@ eventloopthread_test: chtho/net/tests/CMakeFiles/eventloopthread_test.dir/rule
 eventloopthread_test/fast:
 	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build
 .PHONY : eventloopthread_test/fast
+
+# Convenience name for target.
+chtho/net/tests/CMakeFiles/inetaddr_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/inetaddr_test.dir/rule
+.PHONY : chtho/net/tests/CMakeFiles/inetaddr_test.dir/rule
+
+# Convenience name for target.
+inetaddr_test: chtho/net/tests/CMakeFiles/inetaddr_test.dir/rule
+
+.PHONY : inetaddr_test
+
+# fast build rule for target.
+inetaddr_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/inetaddr_test.dir/build.make chtho/net/tests/CMakeFiles/inetaddr_test.dir/build
+.PHONY : inetaddr_test/fast
 
 Channel_test.o: Channel_test.cpp.o
 
@@ -322,6 +337,33 @@ EventLoop_test.cpp.s:
 	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloop_test.dir/build.make chtho/net/tests/CMakeFiles/eventloop_test.dir/EventLoop_test.cpp.s
 .PHONY : EventLoop_test.cpp.s
 
+InetAddr_test.o: InetAddr_test.cpp.o
+
+.PHONY : InetAddr_test.o
+
+# target to build an object file
+InetAddr_test.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/inetaddr_test.dir/build.make chtho/net/tests/CMakeFiles/inetaddr_test.dir/InetAddr_test.cpp.o
+.PHONY : InetAddr_test.cpp.o
+
+InetAddr_test.i: InetAddr_test.cpp.i
+
+.PHONY : InetAddr_test.i
+
+# target to preprocess a source file
+InetAddr_test.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/inetaddr_test.dir/build.make chtho/net/tests/CMakeFiles/inetaddr_test.dir/InetAddr_test.cpp.i
+.PHONY : InetAddr_test.cpp.i
+
+InetAddr_test.s: InetAddr_test.cpp.s
+
+.PHONY : InetAddr_test.s
+
+# target to generate assembly for a file
+InetAddr_test.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/inetaddr_test.dir/build.make chtho/net/tests/CMakeFiles/inetaddr_test.dir/InetAddr_test.cpp.s
+.PHONY : InetAddr_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -331,13 +373,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... install/local"
 	@echo "... install/strip"
-	@echo "... eventloopthreadpool_test"
-	@echo "... channel_test"
 	@echo "... rebuild_cache"
+	@echo "... channel_test"
+	@echo "... eventloopthreadpool_test"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... eventloop_test"
 	@echo "... eventloopthread_test"
+	@echo "... inetaddr_test"
 	@echo "... Channel_test.o"
 	@echo "... Channel_test.i"
 	@echo "... Channel_test.s"
@@ -350,6 +393,9 @@ help:
 	@echo "... EventLoop_test.o"
 	@echo "... EventLoop_test.i"
 	@echo "... EventLoop_test.s"
+	@echo "... InetAddr_test.o"
+	@echo "... InetAddr_test.i"
+	@echo "... InetAddr_test.s"
 .PHONY : help
 
 

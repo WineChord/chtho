@@ -78,6 +78,28 @@ chtho/net/CMakeFiles/chtho_net.dir/EventLoopThreadPool.cpp.o
  /data/projects/chtho/chtho/net/EventLoopThreadPool.cpp
  /data/projects/chtho/chtho/net/EventLoopThreadPool.h
  /data/projects/chtho/chtho/net/TimerID.h
+chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.o
+ ../chtho/base/noncopyable.h
+ ../chtho/logging/FixedBuffer.h
+ ../chtho/logging/LogStream.h
+ ../chtho/logging/Logger.h
+ ../chtho/logging/SourceFile.h
+ ../chtho/time/TimeZone.h
+ ../chtho/time/Timestamp.h
+ /data/projects/chtho/chtho/net/InetAddr.cpp
+ /data/projects/chtho/chtho/net/InetAddr.h
+ /data/projects/chtho/chtho/net/Socket.h
+chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.o
+ ../chtho/base/noncopyable.h
+ ../chtho/logging/FixedBuffer.h
+ ../chtho/logging/LogStream.h
+ ../chtho/logging/Logger.h
+ ../chtho/logging/SourceFile.h
+ ../chtho/time/TimeZone.h
+ ../chtho/time/Timestamp.h
+ /data/projects/chtho/chtho/net/InetAddr.h
+ /data/projects/chtho/chtho/net/Socket.cpp
+ /data/projects/chtho/chtho/net/Socket.h
 chtho/net/CMakeFiles/chtho_net.dir/Timer.cpp.o
  ../chtho/time/Timestamp.h
  /data/projects/chtho/chtho/net/Callbacks.h

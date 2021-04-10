@@ -246,19 +246,6 @@ chtho_net/fast:
 .PHONY : chtho_net/fast
 
 #=============================================================================
-# Target rules for targets named eventloopthreadpool_test
-
-# Build rule for target.
-eventloopthreadpool_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 eventloopthreadpool_test
-.PHONY : eventloopthreadpool_test
-
-# fast build rule for target.
-eventloopthreadpool_test/fast:
-	$(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build
-.PHONY : eventloopthreadpool_test/fast
-
-#=============================================================================
 # Target rules for targets named channel_test
 
 # Build rule for target.
@@ -270,6 +257,19 @@ channel_test: cmake_check_build_system
 channel_test/fast:
 	$(MAKE) -f chtho/net/tests/CMakeFiles/channel_test.dir/build.make chtho/net/tests/CMakeFiles/channel_test.dir/build
 .PHONY : channel_test/fast
+
+#=============================================================================
+# Target rules for targets named eventloopthreadpool_test
+
+# Build rule for target.
+eventloopthreadpool_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eventloopthreadpool_test
+.PHONY : eventloopthreadpool_test
+
+# fast build rule for target.
+eventloopthreadpool_test/fast:
+	$(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build
+.PHONY : eventloopthreadpool_test/fast
 
 #=============================================================================
 # Target rules for targets named eventloop_test
@@ -297,6 +297,19 @@ eventloopthread_test/fast:
 	$(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build
 .PHONY : eventloopthread_test/fast
 
+#=============================================================================
+# Target rules for targets named inetaddr_test
+
+# Build rule for target.
+inetaddr_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 inetaddr_test
+.PHONY : inetaddr_test
+
+# fast build rule for target.
+inetaddr_test/fast:
+	$(MAKE) -f chtho/net/tests/CMakeFiles/inetaddr_test.dir/build.make chtho/net/tests/CMakeFiles/inetaddr_test.dir/build
+.PHONY : inetaddr_test/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -316,10 +329,11 @@ help:
 	@echo "... logger_test"
 	@echo "... chtho_time"
 	@echo "... chtho_net"
-	@echo "... eventloopthreadpool_test"
 	@echo "... channel_test"
+	@echo "... eventloopthreadpool_test"
 	@echo "... eventloop_test"
 	@echo "... eventloopthread_test"
+	@echo "... inetaddr_test"
 .PHONY : help
 
 

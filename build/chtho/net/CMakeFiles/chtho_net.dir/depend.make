@@ -78,6 +78,28 @@ chtho/net/CMakeFiles/chtho_net.dir/EventLoopThreadPool.cpp.o: ../chtho/net/Event
 chtho/net/CMakeFiles/chtho_net.dir/EventLoopThreadPool.cpp.o: ../chtho/net/EventLoopThreadPool.h
 chtho/net/CMakeFiles/chtho_net.dir/EventLoopThreadPool.cpp.o: ../chtho/net/TimerID.h
 
+chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.o: ../chtho/base/noncopyable.h
+chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.o: ../chtho/logging/FixedBuffer.h
+chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.o: ../chtho/logging/LogStream.h
+chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.o: ../chtho/logging/Logger.h
+chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.o: ../chtho/logging/SourceFile.h
+chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.o: ../chtho/time/TimeZone.h
+chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.o: ../chtho/time/Timestamp.h
+chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.o: ../chtho/net/InetAddr.cpp
+chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.o: ../chtho/net/InetAddr.h
+chtho/net/CMakeFiles/chtho_net.dir/InetAddr.cpp.o: ../chtho/net/Socket.h
+
+chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.o: ../chtho/base/noncopyable.h
+chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.o: ../chtho/logging/FixedBuffer.h
+chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.o: ../chtho/logging/LogStream.h
+chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.o: ../chtho/logging/Logger.h
+chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.o: ../chtho/logging/SourceFile.h
+chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.o: ../chtho/time/TimeZone.h
+chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.o: ../chtho/time/Timestamp.h
+chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.o: ../chtho/net/InetAddr.h
+chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.o: ../chtho/net/Socket.cpp
+chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.o: ../chtho/net/Socket.h
+
 chtho/net/CMakeFiles/chtho_net.dir/Timer.cpp.o: ../chtho/time/Timestamp.h
 chtho/net/CMakeFiles/chtho_net.dir/Timer.cpp.o: ../chtho/net/Callbacks.h
 chtho/net/CMakeFiles/chtho_net.dir/Timer.cpp.o: ../chtho/net/Timer.cpp
