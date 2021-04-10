@@ -246,6 +246,19 @@ chtho_net/fast:
 .PHONY : chtho_net/fast
 
 #=============================================================================
+# Target rules for targets named channel_test
+
+# Build rule for target.
+channel_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 channel_test
+.PHONY : channel_test
+
+# fast build rule for target.
+channel_test/fast:
+	$(MAKE) -f chtho/net/tests/CMakeFiles/channel_test.dir/build.make chtho/net/tests/CMakeFiles/channel_test.dir/build
+.PHONY : channel_test/fast
+
+#=============================================================================
 # Target rules for targets named eventloop_test
 
 # Build rule for target.
@@ -257,6 +270,19 @@ eventloop_test: cmake_check_build_system
 eventloop_test/fast:
 	$(MAKE) -f chtho/net/tests/CMakeFiles/eventloop_test.dir/build.make chtho/net/tests/CMakeFiles/eventloop_test.dir/build
 .PHONY : eventloop_test/fast
+
+#=============================================================================
+# Target rules for targets named eventloopthread_test
+
+# Build rule for target.
+eventloopthread_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eventloopthread_test
+.PHONY : eventloopthread_test
+
+# fast build rule for target.
+eventloopthread_test/fast:
+	$(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build
+.PHONY : eventloopthread_test/fast
 
 # Help Target
 help:
@@ -277,7 +303,9 @@ help:
 	@echo "... logger_test"
 	@echo "... chtho_time"
 	@echo "... chtho_net"
+	@echo "... channel_test"
 	@echo "... eventloop_test"
+	@echo "... eventloopthread_test"
 .PHONY : help
 
 

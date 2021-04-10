@@ -32,6 +32,20 @@ public:
   bool valid() const { return usSinceE_ > 0; }
   std::string toString() const;
 
+  static double diffInSec(const Timestamp& lhs, const Timestamp& rhs)
+  {
+    return static_cast<double>(lhs.usSinceE() - rhs.usSinceE())/usPerSec;
+  }
+
+  static struct timespec toSpec(int64_t uss) 
+  {
+    struct timespec ts;
+    ts.tv_sec = static_cast<time_t>(uss/usPerSec);
+    ts.tv_nsec = static_cast<long>(uss%usPerSec * 1000);
+    return ts;
+  }
+
+  // add seconds 
   Timestamp operator+(const double secs)
   {
     int64_t delta = static_cast<int64_t>(secs * usPerSec);
@@ -41,10 +55,7 @@ public:
   {
     int64_t us = usSinceE_ - rhs.usSinceE();
     if(us < 100) us = 100;
-    struct timespec ts;
-    ts.tv_sec = static_cast<time_t>(us/usPerSec);
-    ts.tv_nsec = static_cast<long>(us%usPerSec * 1000);
-    return ts;
+    return toSpec(us);
   }
   bool operator<(const Timestamp& rhs) const 
   {

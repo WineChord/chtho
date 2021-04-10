@@ -38,7 +38,7 @@ EventLoop::EventLoop()
     looping_(false),
     quit_(false),
     poller_(Poller::newDefaultPoller(this)), // poller should be initialzed early
-    timerQueue_(new TimerQueue(this)),
+    timerQueue_(new TimerQueue(this)), // timerfd depends on poller_
     wakeupFd_(createEventfd()),
     wakeupChannel_(new Channel(this, wakeupFd_)),
     callingPendingCBs_(false),
@@ -101,6 +101,17 @@ void EventLoop::loop()
   looping_ = false;
 }
 
+void EventLoop::quit()
+{
+  quit_ = true;
+  // there is a chance that after the quit_ is set
+  // (usually called inside doPendingFuncs)
+  // and it immediate run out of loop() func and
+  // destroy the EventLoop object, then we will be
+  // accessing an invalid object
+  if(!isInLoopThread()) wakeup();
+}
+
 void EventLoop::doPendingFuncs()
 {
   std::vector<Func> funcs;
@@ -146,6 +157,12 @@ TimerID EventLoop::runAfter(double delay, TimerCB cb)
 {
   Timestamp t(Timestamp::now() + delay);
   return runAt(t, std::move(cb));
+}
+
+TimerID EventLoop::runEvery(double inter, TimerCB cb)
+{
+  Timestamp t(Timestamp::now() + inter);
+  return timerQueue_->addTimer(std::move(cb), t, inter);
 }
 
 void EventLoop::runInLoop(Func cb)

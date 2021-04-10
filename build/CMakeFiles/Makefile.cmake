@@ -60,5 +60,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "chtho/logging/tests/CMakeFiles/logger_test.dir/DependInfo.cmake"
   "chtho/time/CMakeFiles/chtho_time.dir/DependInfo.cmake"
   "chtho/net/CMakeFiles/chtho_net.dir/DependInfo.cmake"
+  "chtho/net/tests/CMakeFiles/channel_test.dir/DependInfo.cmake"
   "chtho/net/tests/CMakeFiles/eventloop_test.dir/DependInfo.cmake"
+  "chtho/net/tests/CMakeFiles/eventloopthread_test.dir/DependInfo.cmake"
   )

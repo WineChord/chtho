@@ -119,6 +119,14 @@ public:
   // ! EventLoop::runAt, which tell the thread to run a function
   // ! at a certain time 
   void loop(); 
+
+  // quit the loop
+  // not guaranteed to be thread safe 
+  // it will set the quit_ flag
+  // if it is not called in loop thread
+  // it will wake up the loop thread
+  void quit();
+
   // runAt is the primary function, it will trigger
   // callback function at the specific timestamp t 
   // runAfter, runEvery will refer to this function 
@@ -126,6 +134,9 @@ public:
   // run cb after delay seconds 
   // implemented via runAt 
   TimerID runAfter(double delay, TimerCB cb);
+  // run cb every inter (interval) seconds
+  // implemented by call TimerQueue::addTimer
+  TimerID runEvery(double inter, TimerCB cb);
 
   // maybe called by other threads
   // if current thread runs the eventloop

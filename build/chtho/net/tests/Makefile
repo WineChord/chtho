@@ -56,6 +56,17 @@ CMAKE_BINARY_DIR = /data/projects/chtho/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -88,17 +99,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -155,6 +155,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+chtho/net/tests/CMakeFiles/channel_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/channel_test.dir/rule
+.PHONY : chtho/net/tests/CMakeFiles/channel_test.dir/rule
+
+# Convenience name for target.
+channel_test: chtho/net/tests/CMakeFiles/channel_test.dir/rule
+
+.PHONY : channel_test
+
+# fast build rule for target.
+channel_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/channel_test.dir/build.make chtho/net/tests/CMakeFiles/channel_test.dir/build
+.PHONY : channel_test/fast
+
+# Convenience name for target.
 chtho/net/tests/CMakeFiles/eventloop_test.dir/rule:
 	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/eventloop_test.dir/rule
 .PHONY : chtho/net/tests/CMakeFiles/eventloop_test.dir/rule
@@ -168,6 +183,75 @@ eventloop_test: chtho/net/tests/CMakeFiles/eventloop_test.dir/rule
 eventloop_test/fast:
 	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloop_test.dir/build.make chtho/net/tests/CMakeFiles/eventloop_test.dir/build
 .PHONY : eventloop_test/fast
+
+# Convenience name for target.
+chtho/net/tests/CMakeFiles/eventloopthread_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/eventloopthread_test.dir/rule
+.PHONY : chtho/net/tests/CMakeFiles/eventloopthread_test.dir/rule
+
+# Convenience name for target.
+eventloopthread_test: chtho/net/tests/CMakeFiles/eventloopthread_test.dir/rule
+
+.PHONY : eventloopthread_test
+
+# fast build rule for target.
+eventloopthread_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build
+.PHONY : eventloopthread_test/fast
+
+Channel_test.o: Channel_test.cpp.o
+
+.PHONY : Channel_test.o
+
+# target to build an object file
+Channel_test.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/channel_test.dir/build.make chtho/net/tests/CMakeFiles/channel_test.dir/Channel_test.cpp.o
+.PHONY : Channel_test.cpp.o
+
+Channel_test.i: Channel_test.cpp.i
+
+.PHONY : Channel_test.i
+
+# target to preprocess a source file
+Channel_test.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/channel_test.dir/build.make chtho/net/tests/CMakeFiles/channel_test.dir/Channel_test.cpp.i
+.PHONY : Channel_test.cpp.i
+
+Channel_test.s: Channel_test.cpp.s
+
+.PHONY : Channel_test.s
+
+# target to generate assembly for a file
+Channel_test.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/channel_test.dir/build.make chtho/net/tests/CMakeFiles/channel_test.dir/Channel_test.cpp.s
+.PHONY : Channel_test.cpp.s
+
+EventLoopThread_test.o: EventLoopThread_test.cpp.o
+
+.PHONY : EventLoopThread_test.o
+
+# target to build an object file
+EventLoopThread_test.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthread_test.dir/EventLoopThread_test.cpp.o
+.PHONY : EventLoopThread_test.cpp.o
+
+EventLoopThread_test.i: EventLoopThread_test.cpp.i
+
+.PHONY : EventLoopThread_test.i
+
+# target to preprocess a source file
+EventLoopThread_test.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthread_test.dir/EventLoopThread_test.cpp.i
+.PHONY : EventLoopThread_test.cpp.i
+
+EventLoopThread_test.s: EventLoopThread_test.cpp.s
+
+.PHONY : EventLoopThread_test.s
+
+# target to generate assembly for a file
+EventLoopThread_test.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthread_test.dir/EventLoopThread_test.cpp.s
+.PHONY : EventLoopThread_test.cpp.s
 
 EventLoop_test.o: EventLoop_test.cpp.o
 
@@ -202,13 +286,21 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... edit_cache"
+	@echo "... channel_test"
 	@echo "... rebuild_cache"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... eventloop_test"
-	@echo "... edit_cache"
+	@echo "... eventloopthread_test"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... Channel_test.o"
+	@echo "... Channel_test.i"
+	@echo "... Channel_test.s"
+	@echo "... EventLoopThread_test.o"
+	@echo "... EventLoopThread_test.i"
+	@echo "... EventLoopThread_test.s"
 	@echo "... EventLoop_test.o"
 	@echo "... EventLoop_test.i"
 	@echo "... EventLoop_test.s"
