@@ -12,10 +12,13 @@ namespace chtho
 {
 namespace net
 {
+class EventLoop;
 
 using TimerCB = std::function<void()>;
 using EventCB = std::function<void()>; // event callback
 using ReadEventCB = std::function<void()>; // read event callback 
+
+using ThreadInitCB = std::function<void(EventLoop*)>;
 
 } // namespace net
 } // namespace chtho

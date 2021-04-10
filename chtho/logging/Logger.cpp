@@ -74,7 +74,9 @@ TimeZone Logger::timeZone = TimeZone(8*3600, "CST");
 void Logger::commonInit()
 {
   formTimeStr();
+  CurrentThread::pid();
   CurrentThread::tid();
+  stream_ << CurrentThread::pidStr();
   stream_ << CurrentThread::tidStr();
   stream_ << levelName[static_cast<int>(level_)];
 }

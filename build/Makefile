@@ -246,6 +246,19 @@ chtho_net/fast:
 .PHONY : chtho_net/fast
 
 #=============================================================================
+# Target rules for targets named eventloopthreadpool_test
+
+# Build rule for target.
+eventloopthreadpool_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eventloopthreadpool_test
+.PHONY : eventloopthreadpool_test
+
+# fast build rule for target.
+eventloopthreadpool_test/fast:
+	$(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build
+.PHONY : eventloopthreadpool_test/fast
+
+#=============================================================================
 # Target rules for targets named channel_test
 
 # Build rule for target.
@@ -303,6 +316,7 @@ help:
 	@echo "... logger_test"
 	@echo "... chtho_time"
 	@echo "... chtho_net"
+	@echo "... eventloopthreadpool_test"
 	@echo "... channel_test"
 	@echo "... eventloop_test"
 	@echo "... eventloopthread_test"

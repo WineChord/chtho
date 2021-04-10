@@ -14,7 +14,7 @@ using namespace chtho::net;
 
 void print(EventLoop* p)
 {
-  LOG_INFO << "pid: " << getpid() << " loop = " << p;
+  LOG_INFO << "loop = " << p;
 }
 
 int main()

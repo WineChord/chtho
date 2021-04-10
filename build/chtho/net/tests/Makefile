@@ -67,6 +67,28 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -100,28 +122,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /data/projects/chtho/build && $(CMAKE_COMMAND) -E cmake_progress_start /data/projects/chtho/build/CMakeFiles /data/projects/chtho/build/chtho/net/tests/CMakeFiles/progress.marks
@@ -153,6 +153,21 @@ preinstall/fast:
 depend:
 	cd /data/projects/chtho/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule
+.PHONY : chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule
+
+# Convenience name for target.
+eventloopthreadpool_test: chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule
+
+.PHONY : eventloopthreadpool_test
+
+# fast build rule for target.
+eventloopthreadpool_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build
+.PHONY : eventloopthreadpool_test/fast
 
 # Convenience name for target.
 chtho/net/tests/CMakeFiles/channel_test.dir/rule:
@@ -226,6 +241,33 @@ Channel_test.cpp.s:
 	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/channel_test.dir/build.make chtho/net/tests/CMakeFiles/channel_test.dir/Channel_test.cpp.s
 .PHONY : Channel_test.cpp.s
 
+EventLoopThreadPool_test.o: EventLoopThreadPool_test.cpp.o
+
+.PHONY : EventLoopThreadPool_test.o
+
+# target to build an object file
+EventLoopThreadPool_test.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/EventLoopThreadPool_test.cpp.o
+.PHONY : EventLoopThreadPool_test.cpp.o
+
+EventLoopThreadPool_test.i: EventLoopThreadPool_test.cpp.i
+
+.PHONY : EventLoopThreadPool_test.i
+
+# target to preprocess a source file
+EventLoopThreadPool_test.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/EventLoopThreadPool_test.cpp.i
+.PHONY : EventLoopThreadPool_test.cpp.i
+
+EventLoopThreadPool_test.s: EventLoopThreadPool_test.cpp.s
+
+.PHONY : EventLoopThreadPool_test.s
+
+# target to generate assembly for a file
+EventLoopThreadPool_test.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/EventLoopThreadPool_test.cpp.s
+.PHONY : EventLoopThreadPool_test.cpp.s
+
 EventLoopThread_test.o: EventLoopThread_test.cpp.o
 
 .PHONY : EventLoopThread_test.o
@@ -287,17 +329,21 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... eventloopthreadpool_test"
 	@echo "... channel_test"
 	@echo "... rebuild_cache"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... eventloop_test"
 	@echo "... eventloopthread_test"
-	@echo "... install/local"
-	@echo "... install/strip"
 	@echo "... Channel_test.o"
 	@echo "... Channel_test.i"
 	@echo "... Channel_test.s"
+	@echo "... EventLoopThreadPool_test.o"
+	@echo "... EventLoopThreadPool_test.i"
+	@echo "... EventLoopThreadPool_test.s"
 	@echo "... EventLoopThread_test.o"
 	@echo "... EventLoopThread_test.i"
 	@echo "... EventLoopThread_test.s"

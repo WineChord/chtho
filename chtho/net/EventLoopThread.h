@@ -9,6 +9,7 @@
 #include "base/noncopyable.h"
 #include "threads/Thread.h"
 #include "threads/MutexLock.h"
+#include "Callbacks.h"
 
 #include <functional>
 
@@ -21,8 +22,6 @@ class EventLoop;
 // EventLoopThread is a thread wrapper of EventLoop object
 class EventLoopThread : noncopyable
 {
-public:
-  using ThreadInitCB = std::function<void(EventLoop*)>;
 private:
   EventLoop* loop_;
   bool exiting_;

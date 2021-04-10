@@ -6,3 +6,6 @@ target_link_libraries(channel_test chtho_net)
 
 add_executable(eventloopthread_test EventLoopThread_test.cpp)
 target_link_libraries(eventloopthread_test chtho_net)
+
+add_executable(eventloopthreadpool_test EventLoopThreadPool_test.cpp)
+target_link_libraries(eventloopthreadpool_test chtho_net)

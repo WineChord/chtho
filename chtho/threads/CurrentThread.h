@@ -22,9 +22,19 @@ public:
   static __thread char tid_str[32];
   static __thread int tid_len;
   static __thread const char* thread_name;
+
+  static __thread pid_t pid_cached;
+  static __thread char pid_str[32];
+  static __thread int pid_len;
+
   static pid_t tid();
   static const char* tidStr() { return tid_str; }
   static int tidLen() { return tid_len; }
+
+  static pid_t pid();
+  static const char* pidStr() { return pid_str; }
+  static int pidLen() { return pid_len; }
+
   static void sleepUs(int64_t us)
   {
     struct timespec ts = {0, 0};
