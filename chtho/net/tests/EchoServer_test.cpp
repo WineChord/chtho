@@ -30,6 +30,7 @@ public:
       this->onMessage(conn, buf, t);
     };
     server_.setMsgCB(f2);
+    server_.setThreadNum(numThreads);
   }
 
   void start() { server_.start(); }

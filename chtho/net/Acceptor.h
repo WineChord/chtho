@@ -33,7 +33,7 @@ private:
 
   void handleRead();
 public:
-  Acceptor(EventLoop* loop, const InetAddr& listenAddr, bool reuse);
+  Acceptor(EventLoop* loop, const InetAddr& listenAddr, bool reuse=true);
   ~Acceptor();
   void setNewConnCB(const NewConnCB& cb) { newConnCB_ = cb; }
   void listen();

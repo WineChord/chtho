@@ -68,6 +68,17 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -110,17 +121,6 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -170,36 +170,6 @@ inetaddr_test/fast:
 .PHONY : inetaddr_test/fast
 
 # Convenience name for target.
-chtho/net/tests/CMakeFiles/eventloopthread_test.dir/rule:
-	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/eventloopthread_test.dir/rule
-.PHONY : chtho/net/tests/CMakeFiles/eventloopthread_test.dir/rule
-
-# Convenience name for target.
-eventloopthread_test: chtho/net/tests/CMakeFiles/eventloopthread_test.dir/rule
-
-.PHONY : eventloopthread_test
-
-# fast build rule for target.
-eventloopthread_test/fast:
-	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build
-.PHONY : eventloopthread_test/fast
-
-# Convenience name for target.
-chtho/net/tests/CMakeFiles/eventloop_test.dir/rule:
-	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/eventloop_test.dir/rule
-.PHONY : chtho/net/tests/CMakeFiles/eventloop_test.dir/rule
-
-# Convenience name for target.
-eventloop_test: chtho/net/tests/CMakeFiles/eventloop_test.dir/rule
-
-.PHONY : eventloop_test
-
-# fast build rule for target.
-eventloop_test/fast:
-	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloop_test.dir/build.make chtho/net/tests/CMakeFiles/eventloop_test.dir/build
-.PHONY : eventloop_test/fast
-
-# Convenience name for target.
 chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule:
 	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule
 .PHONY : chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir/rule
@@ -230,19 +200,49 @@ channel_test/fast:
 .PHONY : channel_test/fast
 
 # Convenience name for target.
-chtho/net/tests/CMakeFiles/buffer_test.dir/rule:
-	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/buffer_test.dir/rule
-.PHONY : chtho/net/tests/CMakeFiles/buffer_test.dir/rule
+chtho/net/tests/CMakeFiles/acceptor_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/acceptor_test.dir/rule
+.PHONY : chtho/net/tests/CMakeFiles/acceptor_test.dir/rule
 
 # Convenience name for target.
-buffer_test: chtho/net/tests/CMakeFiles/buffer_test.dir/rule
+acceptor_test: chtho/net/tests/CMakeFiles/acceptor_test.dir/rule
 
-.PHONY : buffer_test
+.PHONY : acceptor_test
 
 # fast build rule for target.
-buffer_test/fast:
-	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/buffer_test.dir/build.make chtho/net/tests/CMakeFiles/buffer_test.dir/build
-.PHONY : buffer_test/fast
+acceptor_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/acceptor_test.dir/build.make chtho/net/tests/CMakeFiles/acceptor_test.dir/build
+.PHONY : acceptor_test/fast
+
+# Convenience name for target.
+chtho/net/tests/CMakeFiles/eventloopthread_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/eventloopthread_test.dir/rule
+.PHONY : chtho/net/tests/CMakeFiles/eventloopthread_test.dir/rule
+
+# Convenience name for target.
+eventloopthread_test: chtho/net/tests/CMakeFiles/eventloopthread_test.dir/rule
+
+.PHONY : eventloopthread_test
+
+# fast build rule for target.
+eventloopthread_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build
+.PHONY : eventloopthread_test/fast
+
+# Convenience name for target.
+chtho/net/tests/CMakeFiles/eventloop_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/eventloop_test.dir/rule
+.PHONY : chtho/net/tests/CMakeFiles/eventloop_test.dir/rule
+
+# Convenience name for target.
+eventloop_test: chtho/net/tests/CMakeFiles/eventloop_test.dir/rule
+
+.PHONY : eventloop_test
+
+# fast build rule for target.
+eventloop_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/eventloop_test.dir/build.make chtho/net/tests/CMakeFiles/eventloop_test.dir/build
+.PHONY : eventloop_test/fast
 
 # Convenience name for target.
 chtho/net/tests/CMakeFiles/echoserver_test.dir/rule:
@@ -258,6 +258,48 @@ echoserver_test: chtho/net/tests/CMakeFiles/echoserver_test.dir/rule
 echoserver_test/fast:
 	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/echoserver_test.dir/build.make chtho/net/tests/CMakeFiles/echoserver_test.dir/build
 .PHONY : echoserver_test/fast
+
+# Convenience name for target.
+chtho/net/tests/CMakeFiles/buffer_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/buffer_test.dir/rule
+.PHONY : chtho/net/tests/CMakeFiles/buffer_test.dir/rule
+
+# Convenience name for target.
+buffer_test: chtho/net/tests/CMakeFiles/buffer_test.dir/rule
+
+.PHONY : buffer_test
+
+# fast build rule for target.
+buffer_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/buffer_test.dir/build.make chtho/net/tests/CMakeFiles/buffer_test.dir/build
+.PHONY : buffer_test/fast
+
+Acceptor_test.o: Acceptor_test.cpp.o
+
+.PHONY : Acceptor_test.o
+
+# target to build an object file
+Acceptor_test.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/acceptor_test.dir/build.make chtho/net/tests/CMakeFiles/acceptor_test.dir/Acceptor_test.cpp.o
+.PHONY : Acceptor_test.cpp.o
+
+Acceptor_test.i: Acceptor_test.cpp.i
+
+.PHONY : Acceptor_test.i
+
+# target to preprocess a source file
+Acceptor_test.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/acceptor_test.dir/build.make chtho/net/tests/CMakeFiles/acceptor_test.dir/Acceptor_test.cpp.i
+.PHONY : Acceptor_test.cpp.i
+
+Acceptor_test.s: Acceptor_test.cpp.s
+
+.PHONY : Acceptor_test.s
+
+# target to generate assembly for a file
+Acceptor_test.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/acceptor_test.dir/build.make chtho/net/tests/CMakeFiles/acceptor_test.dir/Acceptor_test.cpp.s
+.PHONY : Acceptor_test.cpp.s
 
 Buffer_test.o: Buffer_test.cpp.o
 
@@ -454,19 +496,23 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install"
 	@echo "... inetaddr_test"
-	@echo "... eventloopthread_test"
-	@echo "... eventloop_test"
 	@echo "... eventloopthreadpool_test"
 	@echo "... channel_test"
+	@echo "... install"
+	@echo "... acceptor_test"
+	@echo "... eventloopthread_test"
+	@echo "... eventloop_test"
+	@echo "... edit_cache"
+	@echo "... echoserver_test"
 	@echo "... rebuild_cache"
 	@echo "... buffer_test"
 	@echo "... list_install_components"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... echoserver_test"
-	@echo "... edit_cache"
+	@echo "... Acceptor_test.o"
+	@echo "... Acceptor_test.i"
+	@echo "... Acceptor_test.s"
 	@echo "... Buffer_test.o"
 	@echo "... Buffer_test.i"
 	@echo "... Buffer_test.s"

@@ -259,32 +259,6 @@ inetaddr_test/fast:
 .PHONY : inetaddr_test/fast
 
 #=============================================================================
-# Target rules for targets named eventloopthread_test
-
-# Build rule for target.
-eventloopthread_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 eventloopthread_test
-.PHONY : eventloopthread_test
-
-# fast build rule for target.
-eventloopthread_test/fast:
-	$(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build
-.PHONY : eventloopthread_test/fast
-
-#=============================================================================
-# Target rules for targets named eventloop_test
-
-# Build rule for target.
-eventloop_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 eventloop_test
-.PHONY : eventloop_test
-
-# fast build rule for target.
-eventloop_test/fast:
-	$(MAKE) -f chtho/net/tests/CMakeFiles/eventloop_test.dir/build.make chtho/net/tests/CMakeFiles/eventloop_test.dir/build
-.PHONY : eventloop_test/fast
-
-#=============================================================================
 # Target rules for targets named eventloopthreadpool_test
 
 # Build rule for target.
@@ -311,17 +285,43 @@ channel_test/fast:
 .PHONY : channel_test/fast
 
 #=============================================================================
-# Target rules for targets named buffer_test
+# Target rules for targets named acceptor_test
 
 # Build rule for target.
-buffer_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 buffer_test
-.PHONY : buffer_test
+acceptor_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 acceptor_test
+.PHONY : acceptor_test
 
 # fast build rule for target.
-buffer_test/fast:
-	$(MAKE) -f chtho/net/tests/CMakeFiles/buffer_test.dir/build.make chtho/net/tests/CMakeFiles/buffer_test.dir/build
-.PHONY : buffer_test/fast
+acceptor_test/fast:
+	$(MAKE) -f chtho/net/tests/CMakeFiles/acceptor_test.dir/build.make chtho/net/tests/CMakeFiles/acceptor_test.dir/build
+.PHONY : acceptor_test/fast
+
+#=============================================================================
+# Target rules for targets named eventloopthread_test
+
+# Build rule for target.
+eventloopthread_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eventloopthread_test
+.PHONY : eventloopthread_test
+
+# fast build rule for target.
+eventloopthread_test/fast:
+	$(MAKE) -f chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build.make chtho/net/tests/CMakeFiles/eventloopthread_test.dir/build
+.PHONY : eventloopthread_test/fast
+
+#=============================================================================
+# Target rules for targets named eventloop_test
+
+# Build rule for target.
+eventloop_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eventloop_test
+.PHONY : eventloop_test
+
+# fast build rule for target.
+eventloop_test/fast:
+	$(MAKE) -f chtho/net/tests/CMakeFiles/eventloop_test.dir/build.make chtho/net/tests/CMakeFiles/eventloop_test.dir/build
+.PHONY : eventloop_test/fast
 
 #=============================================================================
 # Target rules for targets named echoserver_test
@@ -335,6 +335,19 @@ echoserver_test: cmake_check_build_system
 echoserver_test/fast:
 	$(MAKE) -f chtho/net/tests/CMakeFiles/echoserver_test.dir/build.make chtho/net/tests/CMakeFiles/echoserver_test.dir/build
 .PHONY : echoserver_test/fast
+
+#=============================================================================
+# Target rules for targets named buffer_test
+
+# Build rule for target.
+buffer_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 buffer_test
+.PHONY : buffer_test
+
+# fast build rule for target.
+buffer_test/fast:
+	$(MAKE) -f chtho/net/tests/CMakeFiles/buffer_test.dir/build.make chtho/net/tests/CMakeFiles/buffer_test.dir/build
+.PHONY : buffer_test/fast
 
 # Help Target
 help:
@@ -356,12 +369,13 @@ help:
 	@echo "... chtho_time"
 	@echo "... chtho_net"
 	@echo "... inetaddr_test"
-	@echo "... eventloopthread_test"
-	@echo "... eventloop_test"
 	@echo "... eventloopthreadpool_test"
 	@echo "... channel_test"
-	@echo "... buffer_test"
+	@echo "... acceptor_test"
+	@echo "... eventloopthread_test"
+	@echo "... eventloop_test"
 	@echo "... echoserver_test"
+	@echo "... buffer_test"
 .PHONY : help
 
 

@@ -57,6 +57,38 @@ void TcpServer::setThreadNum(int numThreads)
   assert(0 <= numThreads);
   threadPool_->setNumThread(numThreads);
 }
+// this sockfd is the connection socket
+// newConn is called through acceptor's handleRead
+// when a new connection arrives, the event happens on the
+// listen file descriptor, and poll function in that eventloop
+// thread returns, then in the loop, it will call acceptor's
+// handleRead function, which is registered by the channel.
+// handleRead will call 'accept(2)' to accept the connection
+// and get a connection socket file descriptor, then handleRead
+// will call TcpServer::newConn (this is registered in ctor)
+// and gives the connection socket file descriptor to
+// this function 
+// this function will find the next io loop thread in threadpool,
+// and create a new TcpConnection object. then it will queue
+// the TcpConnection::connEstablished function inside the picked
+// io loop. TcpConnection::connEstablished function
+// will set up callback function for the reading 
+// channel and call connection callback function which is set
+// by this TcpServer::newConn, and typically the connection callback
+// function can be customized by the user through TcpServer::setConnCB.
+// back to TcpConnection::connEstablished, before calling the
+// connection callback, it will register the connection file
+// descriptor's callback function through the use of channel.
+// by calling channel->enableRead(), the connection socket 
+// file descriptor is registered in that io event loop.
+// when the connection file descriptor is readable, the 
+// corresponding callback function will be invoked.
+// specifically, it will call TcpConnection::handleRead,
+// which will read the data on the file descriptor into
+// its inputBuf_, and then pass that buffer to msgCB_
+// by calling the msgCB_. message callback function is also
+// set by the following TcpServer::newConn, and can also be
+// customized by the user from the outside. 
 void TcpServer::newConn(int sockfd, const InetAddr& peerAddr)
 {
   loop_->assertInLoopThread();
