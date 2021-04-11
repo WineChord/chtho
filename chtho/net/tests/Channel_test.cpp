@@ -39,7 +39,7 @@ public:
       interval_(inter),
       cb_(cb)
   {
-    timerfdChannel_.setReadCB([this](){this->handleRead(); });
+    timerfdChannel_.setReadCB([this](Timestamp){this->handleRead(); });
     timerfdChannel_.enableRead();
   }
   ~PeriodicTimer()

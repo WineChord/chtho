@@ -17,6 +17,12 @@ __thread char time_str[64];
 // lastly saved second (used to optimize generation of time string)
 __thread time_t last_sec; 
 
+__thread char errnobuf[512];
+const char* strerror_tl(int savedErrno)
+{
+  return strerror_r(savedErrno, errnobuf, sizeof(errnobuf));
+}
+
 Logger::Level initLogLevel()
 {
   if(::getenv("CHTHO_LOG_TRACE"))

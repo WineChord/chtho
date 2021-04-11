@@ -64,4 +64,5 @@
 /data/projects/chtho/build/chtho/net/tests/CMakeFiles/list_install_components.dir
 /data/projects/chtho/build/chtho/net/tests/CMakeFiles/install/strip.dir
 /data/projects/chtho/build/chtho/net/tests/CMakeFiles/install/local.dir
+/data/projects/chtho/build/chtho/net/tests/CMakeFiles/echoserver_test.dir
 /data/projects/chtho/build/chtho/net/tests/CMakeFiles/edit_cache.dir

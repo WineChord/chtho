@@ -15,3 +15,6 @@ target_link_libraries(inetaddr_test chtho_net)
 
 add_executable(buffer_test Buffer_test.cpp)
 target_link_libraries(buffer_test chtho_net)
+
+add_executable(echoserver_test EchoServer_test.cpp)
+target_link_libraries(echoserver_test chtho_net)

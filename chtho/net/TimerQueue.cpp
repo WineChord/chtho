@@ -31,7 +31,7 @@ TimerQueue::TimerQueue(EventLoop* loop)
     timerfdChannel_(loop, timerfd_),
     timers_()
 {
-  auto f = [this](){ this->handleRead(); };
+  auto f = [this](Timestamp){ this->handleRead(); };
   timerfdChannel_.setReadCB(f);
   timerfdChannel_.enableRead();
 }

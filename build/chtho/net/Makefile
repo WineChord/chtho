@@ -169,6 +169,33 @@ chtho_net/fast:
 	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/build
 .PHONY : chtho_net/fast
 
+Acceptor.o: Acceptor.cpp.o
+
+.PHONY : Acceptor.o
+
+# target to build an object file
+Acceptor.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/Acceptor.cpp.o
+.PHONY : Acceptor.cpp.o
+
+Acceptor.i: Acceptor.cpp.i
+
+.PHONY : Acceptor.i
+
+# target to preprocess a source file
+Acceptor.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/Acceptor.cpp.i
+.PHONY : Acceptor.cpp.i
+
+Acceptor.s: Acceptor.cpp.s
+
+.PHONY : Acceptor.s
+
+# target to generate assembly for a file
+Acceptor.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/Acceptor.cpp.s
+.PHONY : Acceptor.cpp.s
+
 Buffer.o: Buffer.cpp.o
 
 .PHONY : Buffer.o
@@ -358,6 +385,60 @@ Socket.cpp.s:
 	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/Socket.cpp.s
 .PHONY : Socket.cpp.s
 
+TcpConnection.o: TcpConnection.cpp.o
+
+.PHONY : TcpConnection.o
+
+# target to build an object file
+TcpConnection.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/TcpConnection.cpp.o
+.PHONY : TcpConnection.cpp.o
+
+TcpConnection.i: TcpConnection.cpp.i
+
+.PHONY : TcpConnection.i
+
+# target to preprocess a source file
+TcpConnection.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/TcpConnection.cpp.i
+.PHONY : TcpConnection.cpp.i
+
+TcpConnection.s: TcpConnection.cpp.s
+
+.PHONY : TcpConnection.s
+
+# target to generate assembly for a file
+TcpConnection.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/TcpConnection.cpp.s
+.PHONY : TcpConnection.cpp.s
+
+TcpServer.o: TcpServer.cpp.o
+
+.PHONY : TcpServer.o
+
+# target to build an object file
+TcpServer.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/TcpServer.cpp.o
+.PHONY : TcpServer.cpp.o
+
+TcpServer.i: TcpServer.cpp.i
+
+.PHONY : TcpServer.i
+
+# target to preprocess a source file
+TcpServer.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/TcpServer.cpp.i
+.PHONY : TcpServer.cpp.i
+
+TcpServer.s: TcpServer.cpp.s
+
+.PHONY : TcpServer.s
+
+# target to generate assembly for a file
+TcpServer.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/CMakeFiles/chtho_net.dir/build.make chtho/net/CMakeFiles/chtho_net.dir/TcpServer.cpp.s
+.PHONY : TcpServer.cpp.s
+
 Timer.o: Timer.cpp.o
 
 .PHONY : Timer.o
@@ -506,6 +587,9 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... edit_cache"
+	@echo "... Acceptor.o"
+	@echo "... Acceptor.i"
+	@echo "... Acceptor.s"
 	@echo "... Buffer.o"
 	@echo "... Buffer.i"
 	@echo "... Buffer.s"
@@ -527,6 +611,12 @@ help:
 	@echo "... Socket.o"
 	@echo "... Socket.i"
 	@echo "... Socket.s"
+	@echo "... TcpConnection.o"
+	@echo "... TcpConnection.i"
+	@echo "... TcpConnection.s"
+	@echo "... TcpServer.o"
+	@echo "... TcpServer.i"
+	@echo "... TcpServer.s"
 	@echo "... Timer.o"
 	@echo "... Timer.i"
 	@echo "... Timer.s"

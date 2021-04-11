@@ -55,6 +55,7 @@ public:
   LogStream& stream() { return stream_; }
 };
 
+const char* strerror_tl(int savedErrno);
 
 #define LOG_TRACE if(chtho::Logger::logLevel() <= chtho::Logger::Level::TRACE)\
   chtho::Logger(__FILE__, __LINE__, chtho::Logger::Level::TRACE, __func__).stream()

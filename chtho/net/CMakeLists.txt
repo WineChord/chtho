@@ -1,4 +1,5 @@
 set(net_SRCS
+  Acceptor.cpp
   Buffer.cpp
   Channel.cpp
   EventLoop.cpp
@@ -6,6 +7,8 @@ set(net_SRCS
   EventLoopThreadPool.cpp
   InetAddr.cpp  
   Socket.cpp
+  TcpConnection.cpp  
+  TcpServer.cpp 
   Timer.cpp
   TimerQueue.cpp
   poller/EPoll.cpp

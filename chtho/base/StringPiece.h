@@ -42,19 +42,32 @@ public:
 
   char operator[](int i) const { return p_[i]; }
 
+  std::string as_string() const 
+  { return std::string(data(), size()); }
+
+  bool operator==(const StringPiece& y)
+  {
+    if(size() != y.size()) return false;
+    if(memcmp(data(), y.data(), size()) == 0) return true;
+    return false;
+  }
+  bool operator!=(const StringPiece& y)
+  {
+    return !operator==(y);
+  }
 };
 
-bool operator==(const StringPiece& x, const StringPiece& y)
-{
-  if(x.size() != y.size()) return false;
-  if(memcmp(x.data(), y.data(), x.size()) == 0) return true;
-  return false;
-}
+// bool operator==(const StringPiece& x, const StringPiece& y)
+// {
+//   if(x.size() != y.size()) return false;
+//   if(memcmp(x.data(), y.data(), x.size()) == 0) return true;
+//   return false;
+// }
 
-bool operator!=(const StringPiece& x, const StringPiece& y)
-{
-  return !(x==y);
-}
+// bool operator!=(const StringPiece& x, const StringPiece& y)
+// {
+//   return !(x==y);
+// }
 
 } // namespace chtho
 #endif // !CHTHO_BASE_STRINGPIECE_H

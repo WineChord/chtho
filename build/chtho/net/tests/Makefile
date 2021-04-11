@@ -244,6 +244,21 @@ buffer_test/fast:
 	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/buffer_test.dir/build.make chtho/net/tests/CMakeFiles/buffer_test.dir/build
 .PHONY : buffer_test/fast
 
+# Convenience name for target.
+chtho/net/tests/CMakeFiles/echoserver_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/echoserver_test.dir/rule
+.PHONY : chtho/net/tests/CMakeFiles/echoserver_test.dir/rule
+
+# Convenience name for target.
+echoserver_test: chtho/net/tests/CMakeFiles/echoserver_test.dir/rule
+
+.PHONY : echoserver_test
+
+# fast build rule for target.
+echoserver_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/echoserver_test.dir/build.make chtho/net/tests/CMakeFiles/echoserver_test.dir/build
+.PHONY : echoserver_test/fast
+
 Buffer_test.o: Buffer_test.cpp.o
 
 .PHONY : Buffer_test.o
@@ -297,6 +312,33 @@ Channel_test.s: Channel_test.cpp.s
 Channel_test.cpp.s:
 	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/channel_test.dir/build.make chtho/net/tests/CMakeFiles/channel_test.dir/Channel_test.cpp.s
 .PHONY : Channel_test.cpp.s
+
+EchoServer_test.o: EchoServer_test.cpp.o
+
+.PHONY : EchoServer_test.o
+
+# target to build an object file
+EchoServer_test.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/echoserver_test.dir/build.make chtho/net/tests/CMakeFiles/echoserver_test.dir/EchoServer_test.cpp.o
+.PHONY : EchoServer_test.cpp.o
+
+EchoServer_test.i: EchoServer_test.cpp.i
+
+.PHONY : EchoServer_test.i
+
+# target to preprocess a source file
+EchoServer_test.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/echoserver_test.dir/build.make chtho/net/tests/CMakeFiles/echoserver_test.dir/EchoServer_test.cpp.i
+.PHONY : EchoServer_test.cpp.i
+
+EchoServer_test.s: EchoServer_test.cpp.s
+
+.PHONY : EchoServer_test.s
+
+# target to generate assembly for a file
+EchoServer_test.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/echoserver_test.dir/build.make chtho/net/tests/CMakeFiles/echoserver_test.dir/EchoServer_test.cpp.s
+.PHONY : EchoServer_test.cpp.s
 
 EventLoopThreadPool_test.o: EventLoopThreadPool_test.cpp.o
 
@@ -423,6 +465,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... echoserver_test"
 	@echo "... edit_cache"
 	@echo "... Buffer_test.o"
 	@echo "... Buffer_test.i"
@@ -430,6 +473,9 @@ help:
 	@echo "... Channel_test.o"
 	@echo "... Channel_test.i"
 	@echo "... Channel_test.s"
+	@echo "... EchoServer_test.o"
+	@echo "... EchoServer_test.i"
+	@echo "... EchoServer_test.s"
 	@echo "... EventLoopThreadPool_test.o"
 	@echo "... EventLoopThreadPool_test.i"
 	@echo "... EventLoopThreadPool_test.s"

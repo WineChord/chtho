@@ -66,7 +66,7 @@ void Channel::handleEventWithGuard(Timestamp revTime)
   if(revents_ & (POLLERR | POLLNVAL))
     if(errorCB_) errorCB_();
   if(revents_ & (POLLIN|POLLPRI|POLLRDHUP))
-    if(readCB_) readCB_();
+    if(readCB_) readCB_(revTime);
   if(revents_ & POLLOUT)
     if(writeCB_) writeCB_();
   handlingEvents_ = false;

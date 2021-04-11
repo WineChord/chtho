@@ -200,6 +200,8 @@ public:
     const void* eol = memchr(start, '\n', writePtr()-start);
     return static_cast<const char*>(eol);
   }
+
+  ssize_t readFd(int fd, int* savedErrno);
 };
 } // namespace net
 } // namespace chtho

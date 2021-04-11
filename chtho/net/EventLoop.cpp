@@ -52,7 +52,7 @@ EventLoop::EventLoop()
               << " exists in this thread " << threadID_;
   else loopOfThisThread = this;
   // setup callback function to be called when waked up 
-  auto f = [this](){ this->handleRead(); };
+  auto f = [this](Timestamp t){ this->handleRead(); };
   wakeupChannel_->setReadCB(f);
   assert(poller_ != nullptr);
   wakeupChannel_->enableRead();

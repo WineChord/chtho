@@ -323,6 +323,19 @@ buffer_test/fast:
 	$(MAKE) -f chtho/net/tests/CMakeFiles/buffer_test.dir/build.make chtho/net/tests/CMakeFiles/buffer_test.dir/build
 .PHONY : buffer_test/fast
 
+#=============================================================================
+# Target rules for targets named echoserver_test
+
+# Build rule for target.
+echoserver_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 echoserver_test
+.PHONY : echoserver_test
+
+# fast build rule for target.
+echoserver_test/fast:
+	$(MAKE) -f chtho/net/tests/CMakeFiles/echoserver_test.dir/build.make chtho/net/tests/CMakeFiles/echoserver_test.dir/build
+.PHONY : echoserver_test/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -348,6 +361,7 @@ help:
 	@echo "... eventloopthreadpool_test"
 	@echo "... channel_test"
 	@echo "... buffer_test"
+	@echo "... echoserver_test"
 .PHONY : help
 
 

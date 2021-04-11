@@ -67,8 +67,13 @@ void testResolve()
 {
   InetAddr addr(80);
   if(InetAddr::resolve("google.com", &addr))
+  {
     LOG_INFO << "google.com resolved to " << addr.ipPort();
-  else LOG_ERR << "unable to resolve google.com";
+  }
+  else 
+  {
+    LOG_ERR << "unable to resolve google.com";
+  }
 }
 
 int main()
