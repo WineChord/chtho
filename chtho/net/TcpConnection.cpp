@@ -13,6 +13,23 @@ namespace chtho
 {
 namespace net
 {
+// inside ctor, TcpConnection will setup the corresponding
+// channel for the connection socket file descriptor 
+// then it will set up the callback functions for each
+// event happened on the file descriptors 
+// Channel::enableRead will be called in established()
+// to add the update the read event of this connection
+// file descriptor so that the ioloop's poller will 
+// monitor the readable event happened on the 
+// connection file descriptor. when read event happens,
+// handleRead() will be called
+// inside handleRead(), the message callback which is 
+// provided by the user will also be called. remember
+// that this message callback function is set by 
+// TcpServer::newConn short after creating this
+// TcpConnection object 
+// therefore: there are two function provided to the
+// user. connection callback and message callback 
 TcpConnection::TcpConnection(EventLoop* loop,
                              const std::string& name,
                              int sockfd,
@@ -20,9 +37,21 @@ TcpConnection::TcpConnection(EventLoop* loop,
                              const InetAddr& peerAddr)
   : loop_(loop),
     name_(name),
+    // TcpConnection cannot initiate a connection by itself
+    // it can only be constructed by using the sockfd provided
+    // from the outside (returned by accept).
+    // so the initial state for the TcpConnection object 
+    // is State::Connection 
+    // this state will be changed to State::Connected
+    // in TcpConnection::established 
     state_(State::Connecting),
     reading_(true),
-    socket_(new Socket(sockfd)),
+    // TcpConnection owns the connection file descriptor
+    // it does this by create an RAII object of Socket
+    // which TcpConnection is destroyed, the Socket
+    // object will also call it dtor, which will call
+    // ::close to close the connection file descriptor 
+    socket_(new Socket(sockfd)), 
     channel_(new Channel(loop, sockfd)),
     localAddr_(localAddr),
     peerAddr_(peerAddr),
@@ -48,8 +77,16 @@ void TcpConnection::handleRead(Timestamp rcv)
 {
   loop_->assertInLoopThread();
   int savedErrno = 0;
+  // use Buffer to read data on the connection socket
+  // file descriptor 
   ssize_t n = inputBuf_.readFd(channel_->fd(), &savedErrno);
+  // this msgCB_ is provided by the user 
+  // passed by TcpServer::newConn 
   if(n > 0) msgCB_(shared_from_this(), &inputBuf_, rcv);
+  // passive close, happened when the user decide to close
+  // the connection, the readblae event happened on the
+  // connection file descriptor, but when reading this fd
+  // it will return 0, TcpConnection will call handleClose
   else if(n == 0) handleClose();
   else 
   {
@@ -80,6 +117,8 @@ void TcpConnection::handleWrite()
   }
   else LOG_TRACE << "Connection fd = " << channel_->fd() << "is down, no more writing";
 }
+// called when the client decides to close the connection
+// so the read inside handlRead function will return 0 
 void TcpConnection::handleClose()
 {
   loop_->assertInLoopThread();
@@ -87,9 +126,14 @@ void TcpConnection::handleClose()
   assert(state_ == State::Connected || state_ == State::Disconnecting);
   // don't close fd, leave it to dtor
   setState(State::Disconnected);
+  // will set the event to nonevent and update the Poller
+  // for epoll, the updateChannel function will use
+  // ::epoll_ctl and pass the EPOLL_CTL_DEL to remove
+  // the file descriptor 
   channel_->disableAll();
   TcpConnPtr guardThis(shared_from_this());
-  connCB_(guardThis);
+  // connCB_(guardThis); // why this will be called?
+  // closeCB_ is actually TcpServer::rmConn 
   closeCB_(guardThis);
 }
 void TcpConnection::handleError()
@@ -123,17 +167,24 @@ void TcpConnection::connEstablished()
   setState(State::Connected);
   channel_->tie(shared_from_this());
   channel_->enableRead();
+  // connCB_ is passed by TcpServer::newConn
+  // which is actually set by the user from
+  // the outside 
   connCB_(shared_from_this());
 }
 void TcpConnection::connDestroyed()
 {
   loop_->assertInLoopThread();
+  // if we have previously executed
+  // TcpConnection::handleClose 
+  // the following will be omitted 
   if(state_ == State::Connected)
   {
     setState(State::Disconnected);
     channel_->disableAll();
-    connCB_(shared_from_this());
+    // connCB_(shared_from_this()); // again: why this should called?
   }
+  // 
   channel_->remove();
 }
 

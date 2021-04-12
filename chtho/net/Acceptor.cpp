@@ -42,6 +42,9 @@ void Acceptor::listen()
   acceptChannel_.enableRead();
 }
 
+// handleRead is called when there is a read
+// event happened on the connection file descriptor
+// so handleRead is called by the ioloop
 void Acceptor::handleRead()
 {
   loop_->assertInLoopThread();
@@ -49,6 +52,11 @@ void Acceptor::handleRead()
   int connfd = acceptSocket_.accept(&peerAddr);
   if(connfd >= 0)
   {
+    // this new connection callback is actually 
+    // TcpServer::newConn, not the one call be
+    // set by the user from the outside
+    // the user set function onConn is called inside
+    // TcpConnection::established
     if(newConnCB_) newConnCB_(connfd, peerAddr);
     else 
     {
