@@ -78,17 +78,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -99,6 +88,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -155,6 +155,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+chtho/logging/tests/CMakeFiles/logfile_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/logging/tests/CMakeFiles/logfile_test.dir/rule
+.PHONY : chtho/logging/tests/CMakeFiles/logfile_test.dir/rule
+
+# Convenience name for target.
+logfile_test: chtho/logging/tests/CMakeFiles/logfile_test.dir/rule
+
+.PHONY : logfile_test
+
+# fast build rule for target.
+logfile_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/logging/tests/CMakeFiles/logfile_test.dir/build.make chtho/logging/tests/CMakeFiles/logfile_test.dir/build
+.PHONY : logfile_test/fast
+
+# Convenience name for target.
 chtho/logging/tests/CMakeFiles/logger_test.dir/rule:
 	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/logging/tests/CMakeFiles/logger_test.dir/rule
 .PHONY : chtho/logging/tests/CMakeFiles/logger_test.dir/rule
@@ -168,6 +183,33 @@ logger_test: chtho/logging/tests/CMakeFiles/logger_test.dir/rule
 logger_test/fast:
 	cd /data/projects/chtho/build && $(MAKE) -f chtho/logging/tests/CMakeFiles/logger_test.dir/build.make chtho/logging/tests/CMakeFiles/logger_test.dir/build
 .PHONY : logger_test/fast
+
+LogFile_test.o: LogFile_test.cpp.o
+
+.PHONY : LogFile_test.o
+
+# target to build an object file
+LogFile_test.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/logging/tests/CMakeFiles/logfile_test.dir/build.make chtho/logging/tests/CMakeFiles/logfile_test.dir/LogFile_test.cpp.o
+.PHONY : LogFile_test.cpp.o
+
+LogFile_test.i: LogFile_test.cpp.i
+
+.PHONY : LogFile_test.i
+
+# target to preprocess a source file
+LogFile_test.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/logging/tests/CMakeFiles/logfile_test.dir/build.make chtho/logging/tests/CMakeFiles/logfile_test.dir/LogFile_test.cpp.i
+.PHONY : LogFile_test.cpp.i
+
+LogFile_test.s: LogFile_test.cpp.s
+
+.PHONY : LogFile_test.s
+
+# target to generate assembly for a file
+LogFile_test.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/logging/tests/CMakeFiles/logfile_test.dir/build.make chtho/logging/tests/CMakeFiles/logfile_test.dir/LogFile_test.cpp.s
+.PHONY : LogFile_test.cpp.s
 
 Logger_test.o: Logger_test.cpp.o
 
@@ -204,11 +246,15 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... logger_test"
 	@echo "... edit_cache"
+	@echo "... logfile_test"
+	@echo "... logger_test"
+	@echo "... rebuild_cache"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... LogFile_test.o"
+	@echo "... LogFile_test.i"
+	@echo "... LogFile_test.s"
 	@echo "... Logger_test.o"
 	@echo "... Logger_test.i"
 	@echo "... Logger_test.s"

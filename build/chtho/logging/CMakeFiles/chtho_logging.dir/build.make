@@ -81,9 +81,33 @@ chtho/logging/CMakeFiles/chtho_logging.dir/AsyncLogging.cpp.o.provides: chtho/lo
 chtho/logging/CMakeFiles/chtho_logging.dir/AsyncLogging.cpp.o.provides.build: chtho/logging/CMakeFiles/chtho_logging.dir/AsyncLogging.cpp.o
 
 
+chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o: chtho/logging/CMakeFiles/chtho_logging.dir/flags.make
+chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o: ../chtho/logging/FileUtil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o"
+	cd /data/projects/chtho/build/chtho/logging && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_logging.dir/FileUtil.cpp.o -c /data/projects/chtho/chtho/logging/FileUtil.cpp
+
+chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chtho_logging.dir/FileUtil.cpp.i"
+	cd /data/projects/chtho/build/chtho/logging && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/projects/chtho/chtho/logging/FileUtil.cpp > CMakeFiles/chtho_logging.dir/FileUtil.cpp.i
+
+chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chtho_logging.dir/FileUtil.cpp.s"
+	cd /data/projects/chtho/build/chtho/logging && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/projects/chtho/chtho/logging/FileUtil.cpp -o CMakeFiles/chtho_logging.dir/FileUtil.cpp.s
+
+chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o.requires:
+
+.PHONY : chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o.requires
+
+chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o.provides: chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o.requires
+	$(MAKE) -f chtho/logging/CMakeFiles/chtho_logging.dir/build.make chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o.provides.build
+.PHONY : chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o.provides
+
+chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o.provides.build: chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o
+
+
 chtho/logging/CMakeFiles/chtho_logging.dir/LogFile.cpp.o: chtho/logging/CMakeFiles/chtho_logging.dir/flags.make
 chtho/logging/CMakeFiles/chtho_logging.dir/LogFile.cpp.o: ../chtho/logging/LogFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object chtho/logging/CMakeFiles/chtho_logging.dir/LogFile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object chtho/logging/CMakeFiles/chtho_logging.dir/LogFile.cpp.o"
 	cd /data/projects/chtho/build/chtho/logging && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_logging.dir/LogFile.cpp.o -c /data/projects/chtho/chtho/logging/LogFile.cpp
 
 chtho/logging/CMakeFiles/chtho_logging.dir/LogFile.cpp.i: cmake_force
@@ -107,7 +131,7 @@ chtho/logging/CMakeFiles/chtho_logging.dir/LogFile.cpp.o.provides.build: chtho/l
 
 chtho/logging/CMakeFiles/chtho_logging.dir/Logger.cpp.o: chtho/logging/CMakeFiles/chtho_logging.dir/flags.make
 chtho/logging/CMakeFiles/chtho_logging.dir/Logger.cpp.o: ../chtho/logging/Logger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object chtho/logging/CMakeFiles/chtho_logging.dir/Logger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object chtho/logging/CMakeFiles/chtho_logging.dir/Logger.cpp.o"
 	cd /data/projects/chtho/build/chtho/logging && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_logging.dir/Logger.cpp.o -c /data/projects/chtho/chtho/logging/Logger.cpp
 
 chtho/logging/CMakeFiles/chtho_logging.dir/Logger.cpp.i: cmake_force
@@ -131,7 +155,7 @@ chtho/logging/CMakeFiles/chtho_logging.dir/Logger.cpp.o.provides.build: chtho/lo
 
 chtho/logging/CMakeFiles/chtho_logging.dir/Logging.cpp.o: chtho/logging/CMakeFiles/chtho_logging.dir/flags.make
 chtho/logging/CMakeFiles/chtho_logging.dir/Logging.cpp.o: ../chtho/logging/Logging.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object chtho/logging/CMakeFiles/chtho_logging.dir/Logging.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object chtho/logging/CMakeFiles/chtho_logging.dir/Logging.cpp.o"
 	cd /data/projects/chtho/build/chtho/logging && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_logging.dir/Logging.cpp.o -c /data/projects/chtho/chtho/logging/Logging.cpp
 
 chtho/logging/CMakeFiles/chtho_logging.dir/Logging.cpp.i: cmake_force
@@ -155,7 +179,7 @@ chtho/logging/CMakeFiles/chtho_logging.dir/Logging.cpp.o.provides.build: chtho/l
 
 chtho/logging/CMakeFiles/chtho_logging.dir/LogStream.cpp.o: chtho/logging/CMakeFiles/chtho_logging.dir/flags.make
 chtho/logging/CMakeFiles/chtho_logging.dir/LogStream.cpp.o: ../chtho/logging/LogStream.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object chtho/logging/CMakeFiles/chtho_logging.dir/LogStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object chtho/logging/CMakeFiles/chtho_logging.dir/LogStream.cpp.o"
 	cd /data/projects/chtho/build/chtho/logging && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chtho_logging.dir/LogStream.cpp.o -c /data/projects/chtho/chtho/logging/LogStream.cpp
 
 chtho/logging/CMakeFiles/chtho_logging.dir/LogStream.cpp.i: cmake_force
@@ -180,6 +204,7 @@ chtho/logging/CMakeFiles/chtho_logging.dir/LogStream.cpp.o.provides.build: chtho
 # Object files for target chtho_logging
 chtho_logging_OBJECTS = \
 "CMakeFiles/chtho_logging.dir/AsyncLogging.cpp.o" \
+"CMakeFiles/chtho_logging.dir/FileUtil.cpp.o" \
 "CMakeFiles/chtho_logging.dir/LogFile.cpp.o" \
 "CMakeFiles/chtho_logging.dir/Logger.cpp.o" \
 "CMakeFiles/chtho_logging.dir/Logging.cpp.o" \
@@ -189,13 +214,14 @@ chtho_logging_OBJECTS = \
 chtho_logging_EXTERNAL_OBJECTS =
 
 lib/libchtho_logging.a: chtho/logging/CMakeFiles/chtho_logging.dir/AsyncLogging.cpp.o
+lib/libchtho_logging.a: chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o
 lib/libchtho_logging.a: chtho/logging/CMakeFiles/chtho_logging.dir/LogFile.cpp.o
 lib/libchtho_logging.a: chtho/logging/CMakeFiles/chtho_logging.dir/Logger.cpp.o
 lib/libchtho_logging.a: chtho/logging/CMakeFiles/chtho_logging.dir/Logging.cpp.o
 lib/libchtho_logging.a: chtho/logging/CMakeFiles/chtho_logging.dir/LogStream.cpp.o
 lib/libchtho_logging.a: chtho/logging/CMakeFiles/chtho_logging.dir/build.make
 lib/libchtho_logging.a: chtho/logging/CMakeFiles/chtho_logging.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library ../../lib/libchtho_logging.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/projects/chtho/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library ../../lib/libchtho_logging.a"
 	cd /data/projects/chtho/build/chtho/logging && $(CMAKE_COMMAND) -P CMakeFiles/chtho_logging.dir/cmake_clean_target.cmake
 	cd /data/projects/chtho/build/chtho/logging && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/chtho_logging.dir/link.txt --verbose=$(VERBOSE)
 
@@ -205,6 +231,7 @@ chtho/logging/CMakeFiles/chtho_logging.dir/build: lib/libchtho_logging.a
 .PHONY : chtho/logging/CMakeFiles/chtho_logging.dir/build
 
 chtho/logging/CMakeFiles/chtho_logging.dir/requires: chtho/logging/CMakeFiles/chtho_logging.dir/AsyncLogging.cpp.o.requires
+chtho/logging/CMakeFiles/chtho_logging.dir/requires: chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o.requires
 chtho/logging/CMakeFiles/chtho_logging.dir/requires: chtho/logging/CMakeFiles/chtho_logging.dir/LogFile.cpp.o.requires
 chtho/logging/CMakeFiles/chtho_logging.dir/requires: chtho/logging/CMakeFiles/chtho_logging.dir/Logger.cpp.o.requires
 chtho/logging/CMakeFiles/chtho_logging.dir/requires: chtho/logging/CMakeFiles/chtho_logging.dir/Logging.cpp.o.requires

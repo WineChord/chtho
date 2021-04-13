@@ -196,6 +196,33 @@ AsyncLogging.cpp.s:
 	cd /data/projects/chtho/build && $(MAKE) -f chtho/logging/CMakeFiles/chtho_logging.dir/build.make chtho/logging/CMakeFiles/chtho_logging.dir/AsyncLogging.cpp.s
 .PHONY : AsyncLogging.cpp.s
 
+FileUtil.o: FileUtil.cpp.o
+
+.PHONY : FileUtil.o
+
+# target to build an object file
+FileUtil.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/logging/CMakeFiles/chtho_logging.dir/build.make chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o
+.PHONY : FileUtil.cpp.o
+
+FileUtil.i: FileUtil.cpp.i
+
+.PHONY : FileUtil.i
+
+# target to preprocess a source file
+FileUtil.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/logging/CMakeFiles/chtho_logging.dir/build.make chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.i
+.PHONY : FileUtil.cpp.i
+
+FileUtil.s: FileUtil.cpp.s
+
+.PHONY : FileUtil.s
+
+# target to generate assembly for a file
+FileUtil.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/logging/CMakeFiles/chtho_logging.dir/build.make chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.s
+.PHONY : FileUtil.cpp.s
+
 LogFile.o: LogFile.cpp.o
 
 .PHONY : LogFile.o
@@ -320,6 +347,9 @@ help:
 	@echo "... AsyncLogging.o"
 	@echo "... AsyncLogging.i"
 	@echo "... AsyncLogging.s"
+	@echo "... FileUtil.o"
+	@echo "... FileUtil.i"
+	@echo "... FileUtil.s"
 	@echo "... LogFile.o"
 	@echo "... LogFile.i"
 	@echo "... LogFile.s"

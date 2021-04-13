@@ -3,7 +3,24 @@
 
 chtho/logging/CMakeFiles/chtho_logging.dir/AsyncLogging.cpp.o: ../chtho/logging/AsyncLogging.cpp
 
+chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o: ../chtho/base/noncopyable.h
+chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o: ../chtho/logging/FixedBuffer.h
+chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o: ../chtho/logging/LogStream.h
+chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o: ../chtho/logging/Logger.h
+chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o: ../chtho/logging/SourceFile.h
+chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o: ../chtho/time/TimeZone.h
+chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o: ../chtho/time/Timestamp.h
+chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o: ../chtho/logging/FileUtil.cpp
+chtho/logging/CMakeFiles/chtho_logging.dir/FileUtil.cpp.o: ../chtho/logging/FileUtil.h
+
+chtho/logging/CMakeFiles/chtho_logging.dir/LogFile.cpp.o: ../chtho/base/noncopyable.h
+chtho/logging/CMakeFiles/chtho_logging.dir/LogFile.cpp.o: ../chtho/threads/CurrentThread.h
+chtho/logging/CMakeFiles/chtho_logging.dir/LogFile.cpp.o: ../chtho/threads/MutexLock.h
+chtho/logging/CMakeFiles/chtho_logging.dir/LogFile.cpp.o: ../chtho/threads/MutexLockGuard.h
+chtho/logging/CMakeFiles/chtho_logging.dir/LogFile.cpp.o: ../chtho/time/Timestamp.h
+chtho/logging/CMakeFiles/chtho_logging.dir/LogFile.cpp.o: ../chtho/logging/FileUtil.h
 chtho/logging/CMakeFiles/chtho_logging.dir/LogFile.cpp.o: ../chtho/logging/LogFile.cpp
+chtho/logging/CMakeFiles/chtho_logging.dir/LogFile.cpp.o: ../chtho/logging/LogFile.h
 
 chtho/logging/CMakeFiles/chtho_logging.dir/LogStream.cpp.o: ../chtho/base/noncopyable.h
 chtho/logging/CMakeFiles/chtho_logging.dir/LogStream.cpp.o: ../chtho/logging/FixedBuffer.h

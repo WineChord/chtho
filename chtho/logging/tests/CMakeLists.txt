@@ -1,2 +1,5 @@
 add_executable(logger_test Logger_test.cpp)
 target_link_libraries(logger_test chtho_logging chtho_threads)
+
+add_executable(logfile_test LogFile_test.cpp)
+target_link_libraries(logfile_test chtho_logging chtho_threads)

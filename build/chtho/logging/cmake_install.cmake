@@ -40,6 +40,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/data/projects/chtho/chtho/logging/Logging.h"
     "/data/projects/chtho/chtho/logging/LogFile.h"
     "/data/projects/chtho/chtho/logging/AsyncLogging.h"
+    "/data/projects/chtho/chtho/logging/FileUtil.h"
     "/data/projects/chtho/chtho/logging/SourceFile.h"
     )
 endif()

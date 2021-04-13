@@ -207,6 +207,19 @@ chtho_logging/fast:
 .PHONY : chtho_logging/fast
 
 #=============================================================================
+# Target rules for targets named logfile_test
+
+# Build rule for target.
+logfile_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 logfile_test
+.PHONY : logfile_test
+
+# fast build rule for target.
+logfile_test/fast:
+	$(MAKE) -f chtho/logging/tests/CMakeFiles/logfile_test.dir/build.make chtho/logging/tests/CMakeFiles/logfile_test.dir/build
+.PHONY : logfile_test/fast
+
+#=============================================================================
 # Target rules for targets named logger_test
 
 # Build rule for target.
@@ -378,6 +391,7 @@ help:
 	@echo "... chtho_threads"
 	@echo "... threadpool_test"
 	@echo "... chtho_logging"
+	@echo "... logfile_test"
 	@echo "... logger_test"
 	@echo "... chtho_time"
 	@echo "... chtho_net"

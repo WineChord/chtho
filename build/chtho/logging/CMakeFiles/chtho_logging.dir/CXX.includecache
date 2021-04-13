@@ -8,6 +8,46 @@
 
 ../chtho/base/noncopyable.h
 
+../chtho/logging/FixedBuffer.h
+base/noncopyable.h
+../chtho/logging/base/noncopyable.h
+cstddef
+-
+cstring
+-
+
+../chtho/logging/LogStream.h
+base/noncopyable.h
+../chtho/logging/base/noncopyable.h
+FixedBuffer.h
+../chtho/logging/FixedBuffer.h
+cstddef
+-
+cstdio
+-
+cstring
+-
+string
+-
+type_traits
+-
+algorithm
+-
+
+../chtho/logging/Logger.h
+SourceFile.h
+../chtho/logging/SourceFile.h
+LogStream.h
+../chtho/logging/LogStream.h
+time/Timestamp.h
+../chtho/logging/time/Timestamp.h
+time/TimeZone.h
+../chtho/logging/time/TimeZone.h
+
+../chtho/logging/SourceFile.h
+cstring
+-
+
 ../chtho/threads/CurrentThread.h
 pthread.h
 -
@@ -17,6 +57,20 @@ stdint.h
 -
 time.h
 -
+
+../chtho/threads/MutexLock.h
+base/noncopyable.h
+../chtho/threads/base/noncopyable.h
+threads/CurrentThread.h
+../chtho/threads/threads/CurrentThread.h
+pthread.h
+-
+assert.h
+-
+
+../chtho/threads/MutexLockGuard.h
+threads/MutexLock.h
+../chtho/threads/threads/MutexLock.h
 
 ../chtho/time/TimeZone.h
 memory
@@ -34,6 +88,22 @@ string
 
 /data/projects/chtho/chtho/logging/AsyncLogging.cpp
 
+/data/projects/chtho/chtho/logging/FileUtil.cpp
+FileUtil.h
+/data/projects/chtho/chtho/logging/FileUtil.h
+logging/Logger.h
+/data/projects/chtho/chtho/logging/logging/Logger.h
+assert.h
+-
+
+/data/projects/chtho/chtho/logging/FileUtil.h
+base/noncopyable.h
+/data/projects/chtho/chtho/logging/base/noncopyable.h
+string
+-
+stdio.h
+-
+
 /data/projects/chtho/chtho/logging/FixedBuffer.h
 base/noncopyable.h
 /data/projects/chtho/chtho/logging/base/noncopyable.h
@@ -43,6 +113,22 @@ cstring
 -
 
 /data/projects/chtho/chtho/logging/LogFile.cpp
+LogFile.h
+/data/projects/chtho/chtho/logging/LogFile.h
+unistd.h
+-
+
+/data/projects/chtho/chtho/logging/LogFile.h
+base/noncopyable.h
+/data/projects/chtho/chtho/logging/base/noncopyable.h
+threads/MutexLockGuard.h
+/data/projects/chtho/chtho/logging/threads/MutexLockGuard.h
+FileUtil.h
+/data/projects/chtho/chtho/logging/FileUtil.h
+string
+-
+memory
+-
 
 /data/projects/chtho/chtho/logging/LogStream.cpp
 LogStream.h

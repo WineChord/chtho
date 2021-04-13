@@ -1,5 +1,6 @@
 set(logging_SRCS
   AsyncLogging.cpp
+  FileUtil.cpp 
   LogFile.cpp
   Logger.cpp
   Logging.cpp

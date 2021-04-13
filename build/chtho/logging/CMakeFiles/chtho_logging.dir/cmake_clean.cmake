@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/chtho_logging.dir/AsyncLogging.cpp.o"
+  "CMakeFiles/chtho_logging.dir/FileUtil.cpp.o"
   "CMakeFiles/chtho_logging.dir/LogFile.cpp.o"
   "CMakeFiles/chtho_logging.dir/Logger.cpp.o"
   "CMakeFiles/chtho_logging.dir/Logging.cpp.o"

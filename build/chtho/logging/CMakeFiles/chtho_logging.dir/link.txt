@@ -1,2 +1,2 @@
-/usr/bin/ar qc ../../lib/libchtho_logging.a  CMakeFiles/chtho_logging.dir/AsyncLogging.cpp.o CMakeFiles/chtho_logging.dir/LogFile.cpp.o CMakeFiles/chtho_logging.dir/Logger.cpp.o CMakeFiles/chtho_logging.dir/Logging.cpp.o CMakeFiles/chtho_logging.dir/LogStream.cpp.o
+/usr/bin/ar qc ../../lib/libchtho_logging.a  CMakeFiles/chtho_logging.dir/AsyncLogging.cpp.o CMakeFiles/chtho_logging.dir/FileUtil.cpp.o CMakeFiles/chtho_logging.dir/LogFile.cpp.o CMakeFiles/chtho_logging.dir/Logger.cpp.o CMakeFiles/chtho_logging.dir/Logging.cpp.o CMakeFiles/chtho_logging.dir/LogStream.cpp.o
 /usr/bin/ranlib ../../lib/libchtho_logging.a
