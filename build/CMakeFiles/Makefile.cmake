@@ -59,6 +59,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "chtho/logging/CMakeFiles/chtho_logging.dir/DependInfo.cmake"
   "chtho/logging/tests/CMakeFiles/logfile_test.dir/DependInfo.cmake"
   "chtho/logging/tests/CMakeFiles/logger_test.dir/DependInfo.cmake"
+  "chtho/logging/tests/CMakeFiles/asynclogging_test.dir/DependInfo.cmake"
   "chtho/time/CMakeFiles/chtho_time.dir/DependInfo.cmake"
   "chtho/net/CMakeFiles/chtho_net.dir/DependInfo.cmake"
   "chtho/net/tests/CMakeFiles/inetaddr_test.dir/DependInfo.cmake"

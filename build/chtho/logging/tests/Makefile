@@ -89,17 +89,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -121,6 +110,17 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -183,6 +183,48 @@ logger_test: chtho/logging/tests/CMakeFiles/logger_test.dir/rule
 logger_test/fast:
 	cd /data/projects/chtho/build && $(MAKE) -f chtho/logging/tests/CMakeFiles/logger_test.dir/build.make chtho/logging/tests/CMakeFiles/logger_test.dir/build
 .PHONY : logger_test/fast
+
+# Convenience name for target.
+chtho/logging/tests/CMakeFiles/asynclogging_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/logging/tests/CMakeFiles/asynclogging_test.dir/rule
+.PHONY : chtho/logging/tests/CMakeFiles/asynclogging_test.dir/rule
+
+# Convenience name for target.
+asynclogging_test: chtho/logging/tests/CMakeFiles/asynclogging_test.dir/rule
+
+.PHONY : asynclogging_test
+
+# fast build rule for target.
+asynclogging_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/logging/tests/CMakeFiles/asynclogging_test.dir/build.make chtho/logging/tests/CMakeFiles/asynclogging_test.dir/build
+.PHONY : asynclogging_test/fast
+
+AsyncLogging_test.o: AsyncLogging_test.cpp.o
+
+.PHONY : AsyncLogging_test.o
+
+# target to build an object file
+AsyncLogging_test.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/logging/tests/CMakeFiles/asynclogging_test.dir/build.make chtho/logging/tests/CMakeFiles/asynclogging_test.dir/AsyncLogging_test.cpp.o
+.PHONY : AsyncLogging_test.cpp.o
+
+AsyncLogging_test.i: AsyncLogging_test.cpp.i
+
+.PHONY : AsyncLogging_test.i
+
+# target to preprocess a source file
+AsyncLogging_test.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/logging/tests/CMakeFiles/asynclogging_test.dir/build.make chtho/logging/tests/CMakeFiles/asynclogging_test.dir/AsyncLogging_test.cpp.i
+.PHONY : AsyncLogging_test.cpp.i
+
+AsyncLogging_test.s: AsyncLogging_test.cpp.s
+
+.PHONY : AsyncLogging_test.s
+
+# target to generate assembly for a file
+AsyncLogging_test.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/logging/tests/CMakeFiles/asynclogging_test.dir/build.make chtho/logging/tests/CMakeFiles/asynclogging_test.dir/AsyncLogging_test.cpp.s
+.PHONY : AsyncLogging_test.cpp.s
 
 LogFile_test.o: LogFile_test.cpp.o
 
@@ -249,9 +291,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... logfile_test"
 	@echo "... logger_test"
-	@echo "... rebuild_cache"
+	@echo "... asynclogging_test"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... rebuild_cache"
+	@echo "... AsyncLogging_test.o"
+	@echo "... AsyncLogging_test.i"
+	@echo "... AsyncLogging_test.s"
 	@echo "... LogFile_test.o"
 	@echo "... LogFile_test.i"
 	@echo "... LogFile_test.s"

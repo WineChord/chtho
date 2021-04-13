@@ -233,6 +233,19 @@ logger_test/fast:
 .PHONY : logger_test/fast
 
 #=============================================================================
+# Target rules for targets named asynclogging_test
+
+# Build rule for target.
+asynclogging_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 asynclogging_test
+.PHONY : asynclogging_test
+
+# fast build rule for target.
+asynclogging_test/fast:
+	$(MAKE) -f chtho/logging/tests/CMakeFiles/asynclogging_test.dir/build.make chtho/logging/tests/CMakeFiles/asynclogging_test.dir/build
+.PHONY : asynclogging_test/fast
+
+#=============================================================================
 # Target rules for targets named chtho_time
 
 # Build rule for target.
@@ -393,6 +406,7 @@ help:
 	@echo "... chtho_logging"
 	@echo "... logfile_test"
 	@echo "... logger_test"
+	@echo "... asynclogging_test"
 	@echo "... chtho_time"
 	@echo "... chtho_net"
 	@echo "... inetaddr_test"

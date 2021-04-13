@@ -3,3 +3,6 @@ target_link_libraries(logger_test chtho_logging chtho_threads)
 
 add_executable(logfile_test LogFile_test.cpp)
 target_link_libraries(logfile_test chtho_logging chtho_threads)
+
+add_executable(asynclogging_test AsyncLogging_test.cpp)
+target_link_libraries(asynclogging_test chtho_logging chtho_threads)

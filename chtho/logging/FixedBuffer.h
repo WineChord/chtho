@@ -33,6 +33,8 @@ public:
   int avail() const { return static_cast<int>(end_ - cur_); }
   // move cur_ pointer forward len 
   void add(size_t len) { cur_ += len; }
+  void reset() { cur_ = data_; }
+  void zero() { memset(data_, 0, sizeof(data_)); }
   void append(const char* buf, size_t len)
   {
     if(static_cast<size_t>(avail()) > len) // space sufficient

@@ -37,9 +37,10 @@
 /data/projects/chtho/build/chtho/logging/tests/CMakeFiles/edit_cache.dir
 /data/projects/chtho/build/chtho/logging/tests/CMakeFiles/logfile_test.dir
 /data/projects/chtho/build/chtho/logging/tests/CMakeFiles/logger_test.dir
-/data/projects/chtho/build/chtho/logging/tests/CMakeFiles/rebuild_cache.dir
+/data/projects/chtho/build/chtho/logging/tests/CMakeFiles/asynclogging_test.dir
 /data/projects/chtho/build/chtho/logging/tests/CMakeFiles/install/local.dir
 /data/projects/chtho/build/chtho/logging/tests/CMakeFiles/install/strip.dir
+/data/projects/chtho/build/chtho/logging/tests/CMakeFiles/rebuild_cache.dir
 /data/projects/chtho/build/chtho/time/CMakeFiles/install.dir
 /data/projects/chtho/build/chtho/time/CMakeFiles/list_install_components.dir
 /data/projects/chtho/build/chtho/time/CMakeFiles/rebuild_cache.dir
