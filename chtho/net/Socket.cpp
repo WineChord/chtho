@@ -152,6 +152,18 @@ struct sockaddr_in6 Socket::getLocalAddr(int sockfd)
     LOG_SYSERR << "Socket::getLocalAddr";
   return res;
 }
+struct sockaddr_in6 Socket::getPeerAddr(int sockfd)
+{
+  struct sockaddr_in6 peeraddr;
+  memset(&peeraddr, 0, sizeof(peeraddr));
+  socklen_t addrlen = static_cast<socklen_t>(sizeof(peeraddr));
+  if(::getpeername(sockfd, reinterpret_cast<struct sockaddr*>(&peeraddr),
+    &addrlen) < 0)
+  {
+    LOG_SYSERR << "Socket::getPeerAddr";
+  }
+  return peeraddr;
+}
 
 int Socket::getSocketError(int sockfd)
 {
@@ -163,6 +175,25 @@ int Socket::getSocketError(int sockfd)
   if(::getsockopt(sockfd, SOL_SOCKET, SO_ERROR, &opt, &optlen) < 0)
     return errno;
   else return opt;
+}
+
+
+bool Socket::isSelfConnect(int sockfd)
+{
+  struct sockaddr_in6 localaddr = getLocalAddr(sockfd);
+  struct sockaddr_in6 peeraddr = getPeerAddr(sockfd);
+  if(localaddr.sin6_family == AF_INET)
+  {
+    struct sockaddr_in* l = reinterpret_cast<struct sockaddr_in*>(&localaddr);
+    struct sockaddr_in* r = reinterpret_cast<struct sockaddr_in*>(&peeraddr);
+    return l->sin_port == r->sin_port && l->sin_addr.s_addr == r->sin_addr.s_addr;
+  }
+  else if(localaddr.sin6_family == AF_INET6)
+  {
+    return localaddr.sin6_port == peeraddr.sin6_port
+      && memcmp(&localaddr.sin6_addr, &peeraddr.sin6_addr, sizeof(localaddr.sin6_addr))==0;
+  }
+  else return false; 
 }
 
 bool Socket::tcpInfo(struct tcp_info* ti) const

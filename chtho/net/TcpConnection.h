@@ -70,6 +70,8 @@ public:
   bool connected() const { return state_ == State::Connected; }
   bool disconnected() const { return state_ == State::Disconnecting; }
   void shutdown();
+  void forceClose();
+  void forceCloseInLoop();
 
   void send(const StringPiece& msg);
   void sendInLoop(const StringPiece& msg);

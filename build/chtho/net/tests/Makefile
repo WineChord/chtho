@@ -56,6 +56,17 @@ CMAKE_BINARY_DIR = /data/projects/chtho/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -110,17 +121,6 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -260,6 +260,21 @@ echoserver_test/fast:
 .PHONY : echoserver_test/fast
 
 # Convenience name for target.
+chtho/net/tests/CMakeFiles/echoclient_test.dir/rule:
+	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/echoclient_test.dir/rule
+.PHONY : chtho/net/tests/CMakeFiles/echoclient_test.dir/rule
+
+# Convenience name for target.
+echoclient_test: chtho/net/tests/CMakeFiles/echoclient_test.dir/rule
+
+.PHONY : echoclient_test
+
+# fast build rule for target.
+echoclient_test/fast:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/echoclient_test.dir/build.make chtho/net/tests/CMakeFiles/echoclient_test.dir/build
+.PHONY : echoclient_test/fast
+
+# Convenience name for target.
 chtho/net/tests/CMakeFiles/buffer_test.dir/rule:
 	cd /data/projects/chtho/build && $(MAKE) -f CMakeFiles/Makefile2 chtho/net/tests/CMakeFiles/buffer_test.dir/rule
 .PHONY : chtho/net/tests/CMakeFiles/buffer_test.dir/rule
@@ -354,6 +369,33 @@ Channel_test.s: Channel_test.cpp.s
 Channel_test.cpp.s:
 	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/channel_test.dir/build.make chtho/net/tests/CMakeFiles/channel_test.dir/Channel_test.cpp.s
 .PHONY : Channel_test.cpp.s
+
+EchoClient_test.o: EchoClient_test.cpp.o
+
+.PHONY : EchoClient_test.o
+
+# target to build an object file
+EchoClient_test.cpp.o:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/echoclient_test.dir/build.make chtho/net/tests/CMakeFiles/echoclient_test.dir/EchoClient_test.cpp.o
+.PHONY : EchoClient_test.cpp.o
+
+EchoClient_test.i: EchoClient_test.cpp.i
+
+.PHONY : EchoClient_test.i
+
+# target to preprocess a source file
+EchoClient_test.cpp.i:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/echoclient_test.dir/build.make chtho/net/tests/CMakeFiles/echoclient_test.dir/EchoClient_test.cpp.i
+.PHONY : EchoClient_test.cpp.i
+
+EchoClient_test.s: EchoClient_test.cpp.s
+
+.PHONY : EchoClient_test.s
+
+# target to generate assembly for a file
+EchoClient_test.cpp.s:
+	cd /data/projects/chtho/build && $(MAKE) -f chtho/net/tests/CMakeFiles/echoclient_test.dir/build.make chtho/net/tests/CMakeFiles/echoclient_test.dir/EchoClient_test.cpp.s
+.PHONY : EchoClient_test.cpp.s
 
 EchoServer_test.o: EchoServer_test.cpp.o
 
@@ -496,6 +538,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/local"
 	@echo "... inetaddr_test"
 	@echo "... eventloopthreadpool_test"
 	@echo "... channel_test"
@@ -506,10 +549,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... echoserver_test"
 	@echo "... rebuild_cache"
+	@echo "... echoclient_test"
 	@echo "... buffer_test"
 	@echo "... list_install_components"
 	@echo "... install/strip"
-	@echo "... install/local"
 	@echo "... Acceptor_test.o"
 	@echo "... Acceptor_test.i"
 	@echo "... Acceptor_test.s"
@@ -519,6 +562,9 @@ help:
 	@echo "... Channel_test.o"
 	@echo "... Channel_test.i"
 	@echo "... Channel_test.s"
+	@echo "... EchoClient_test.o"
+	@echo "... EchoClient_test.i"
+	@echo "... EchoClient_test.s"
 	@echo "... EchoServer_test.o"
 	@echo "... EchoServer_test.i"
 	@echo "... EchoServer_test.s"

@@ -42,7 +42,7 @@ public:
 private:
   void onConn(const TcpConnPtr& conn)
   {
-    LOG_TRACE << conn->peerAddr().ipPort() << " -> "
+    LOG_INFO << conn->peerAddr().ipPort() << " -> "
       << conn->localAddr().ipPort() << " is "
       << (conn->connected() ? "UP" : "DOWN");
     LOG_INFO << conn->getTcpInfoStr();
@@ -52,7 +52,7 @@ private:
   void onMessage(const TcpConnPtr& conn, Buffer* buf, Timestamp t)
   {
     std::string msg(buf->retrieveAllAsString());
-    LOG_TRACE << conn->name() << " recv " << msg.size() << " bytes at " 
+    LOG_INFO << conn->name() << " recv " << msg.size() << " bytes at " 
       << t.toString();
     LOG_INFO << msg;
     if(msg == "exit\n")

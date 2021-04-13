@@ -39,7 +39,9 @@ public:
   static void toIpPort(char* buf, size_t sz, const struct sockaddr* addr);
 
   static struct sockaddr_in6 getLocalAddr(int sockfd);
+  static struct sockaddr_in6 getPeerAddr(int sockfd);
   static int getSocketError(int sockfd);
+  static bool isSelfConnect(int sockfd);
 
   bool tcpInfo(struct tcp_info* ti) const;
   bool tcpInfoStr(char* buf, int len) const;

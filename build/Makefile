@@ -337,6 +337,19 @@ echoserver_test/fast:
 .PHONY : echoserver_test/fast
 
 #=============================================================================
+# Target rules for targets named echoclient_test
+
+# Build rule for target.
+echoclient_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 echoclient_test
+.PHONY : echoclient_test
+
+# fast build rule for target.
+echoclient_test/fast:
+	$(MAKE) -f chtho/net/tests/CMakeFiles/echoclient_test.dir/build.make chtho/net/tests/CMakeFiles/echoclient_test.dir/build
+.PHONY : echoclient_test/fast
+
+#=============================================================================
 # Target rules for targets named buffer_test
 
 # Build rule for target.
@@ -375,6 +388,7 @@ help:
 	@echo "... eventloopthread_test"
 	@echo "... eventloop_test"
 	@echo "... echoserver_test"
+	@echo "... echoclient_test"
 	@echo "... buffer_test"
 .PHONY : help
 

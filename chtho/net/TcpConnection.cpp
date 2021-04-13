@@ -160,6 +160,25 @@ void TcpConnection::shutdownInLoop()
     socket_->shutdownWrite();
 }
 
+void TcpConnection::forceClose()
+{
+  if(state_ == State::Connected || state_ == State::Disconnecting)
+  {
+    setState(State::Disconnecting);
+    auto p = shared_from_this();
+    loop_->queueInLoop([p](){p->forceCloseInLoop();});
+  }
+}
+
+void TcpConnection::forceCloseInLoop()
+{
+  loop_->assertInLoopThread();
+  if(state_ == State::Connected || state_ == State::Disconnecting)
+  {
+    handleClose();
+  }
+}
+
 void TcpConnection::connEstablished()
 {
   loop_->assertInLoopThread();

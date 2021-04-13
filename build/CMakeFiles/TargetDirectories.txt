@@ -53,6 +53,7 @@
 /data/projects/chtho/build/chtho/net/CMakeFiles/install/local.dir
 /data/projects/chtho/build/chtho/net/CMakeFiles/install/strip.dir
 /data/projects/chtho/build/chtho/net/CMakeFiles/edit_cache.dir
+/data/projects/chtho/build/chtho/net/tests/CMakeFiles/install/local.dir
 /data/projects/chtho/build/chtho/net/tests/CMakeFiles/inetaddr_test.dir
 /data/projects/chtho/build/chtho/net/tests/CMakeFiles/eventloopthreadpool_test.dir
 /data/projects/chtho/build/chtho/net/tests/CMakeFiles/channel_test.dir
@@ -63,7 +64,7 @@
 /data/projects/chtho/build/chtho/net/tests/CMakeFiles/edit_cache.dir
 /data/projects/chtho/build/chtho/net/tests/CMakeFiles/echoserver_test.dir
 /data/projects/chtho/build/chtho/net/tests/CMakeFiles/rebuild_cache.dir
+/data/projects/chtho/build/chtho/net/tests/CMakeFiles/echoclient_test.dir
 /data/projects/chtho/build/chtho/net/tests/CMakeFiles/buffer_test.dir
 /data/projects/chtho/build/chtho/net/tests/CMakeFiles/list_install_components.dir
 /data/projects/chtho/build/chtho/net/tests/CMakeFiles/install/strip.dir
-/data/projects/chtho/build/chtho/net/tests/CMakeFiles/install/local.dir

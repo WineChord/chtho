@@ -21,3 +21,6 @@ target_link_libraries(buffer_test chtho_net)
 
 add_executable(echoserver_test EchoServer_test.cpp)
 target_link_libraries(echoserver_test chtho_net)
+
+add_executable(echoclient_test EchoClient_test.cpp)
+target_link_libraries(echoclient_test chtho_net)
