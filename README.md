@@ -1,6 +1,6 @@
 # chtho
 
-A Tcp network library implemented in C++11.
+A TCP network library implemented in C++11.
 
 ## Quick Start
 
