@@ -165,6 +165,11 @@ TimerID EventLoop::runEvery(double inter, TimerCB cb)
   return timerQueue_->addTimer(std::move(cb), t, inter);
 }
 
+void EventLoop::cancel(TimerID timerid)
+{
+  timerQueue_->rmTimer(timerid);
+}
+
 void EventLoop::runInLoop(Func cb)
 {
   // call it directly if we are in the eventloop thread

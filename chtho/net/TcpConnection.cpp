@@ -47,8 +47,8 @@ TcpConnection::TcpConnection(EventLoop* loop,
     state_(State::Connecting),
     reading_(true),
     // TcpConnection owns the connection file descriptor
-    // it does this by create an RAII object of Socket
-    // which TcpConnection is destroyed, the Socket
+    // it does this by creating an RAII object of Socket.
+    // when TcpConnection is destroyed, the Socket
     // object will also call it dtor, which will call
     // ::close to close the connection file descriptor 
     socket_(new Socket(sockfd)), 

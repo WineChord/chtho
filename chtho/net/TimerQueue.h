@@ -53,6 +53,7 @@ private:
   // expired timers 
   std::vector<Entry> getExpired(Timestamp now);
   void addTimerInLoop(Timer* timer);
+  void rmTimerInLoop(TimerID timerid);
   // insert a timer into set
   // return whether timer is the earliest one to expire
   bool insert(Timer* timer);
@@ -74,6 +75,9 @@ public:
   // t: the specifc time when the timer will expire
   // interval: if the timer is repeatable, interval > 0
   TimerID addTimer(TimerCB cb, Timestamp t, double interval);
+  // remove timer from timerqueue 
+  void rmTimer(TimerID timerid);
+
 };
 
 } // namespace net

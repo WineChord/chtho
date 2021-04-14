@@ -15,6 +15,7 @@ namespace net
 class Timer; // forward declaration
 class TimerID
 {
+  friend class TimerQueue;
 private:
   Timer* timer_;
   int64_t seq_;

@@ -3,7 +3,6 @@ set(logging_SRCS
   FileUtil.cpp 
   LogFile.cpp
   Logger.cpp
-  Logging.cpp
   LogStream.cpp  
 )
 

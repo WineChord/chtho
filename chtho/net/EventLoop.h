@@ -138,6 +138,9 @@ public:
   // implemented by call TimerQueue::addTimer
   TimerID runEvery(double inter, TimerCB cb);
 
+  // cancel a timer 
+  void cancel(TimerID timerid);
+
   // maybe called by other threads
   // if current thread runs the eventloop
   // execute it directly

@@ -168,7 +168,29 @@ void TimerQueue::addTimerInLoop(Timer* timer)
   if(earliest) resetTimerfd(timerfd_, timer->expir());
 }
 
-
+void TimerQueue::rmTimer(TimerID timerid)
+{
+  loop_->runInLoop([this,timerid](){this->rmTimerInLoop(timerid);});
+}
+void TimerQueue::rmTimerInLoop(TimerID timerid)
+{
+  loop_->assertInLoopThread();
+  assert(timers_.size() == activeTimers_.size());
+  ActiveTimer timer(timerid.timer_, timerid.seq_);
+  auto it = activeTimers_.find(timer);
+  if(it != activeTimers_.end())
+  {
+    size_t n = timers_.erase(Entry(it->first->expir(), it->first));
+    assert(n == 1);
+    delete it->first;
+    activeTimers_.erase(it);
+  }
+  else if(callingExpiredTimers_)
+  {
+    cancelTimers_.insert(timer);
+  }
+  assert(timers_.size() == activeTimers_.size());
+}
 
 bool TimerQueue::insert(Timer* timer)
 {
