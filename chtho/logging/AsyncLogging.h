@@ -21,9 +21,9 @@ namespace chtho
 class AsyncLogging : noncopyable
 {
 private:
-  using Buf = FixedBuffer<kLarge>;
+  using Buf = FixedBuffer<kLarge>; // 4MB 
   using BufVec = std::vector<std::unique_ptr<Buf>>;
-  using BufPtr = std::unique_ptr<Buf>;
+  using BufPtr = std::unique_ptr<Buf>; // BufPtr is unique pointer 
 
   const int flushInter_;
   std::atomic_bool running_;
@@ -31,11 +31,11 @@ private:
   const off_t rollsz_;
   Thread thread_;
   CountDownLatch latch_;
-  MutexLock mutex_;
+  MutexLock mutex_; // protects the following members 
   Condition cond_;
   BufPtr curBuf_;
   BufPtr nxtBuf_;
-  BufVec bufs_; 
+  BufVec bufs_; // stores buffers to be written to file 
 
   void threadFunc();
 

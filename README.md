@@ -72,6 +72,12 @@ development history: logger/logstream -> threading -> time/timer -> eventloop/th
 * [RAII](./docs/RAII.md)
 * [smartptr](./docs/smartpointers.md)
 
+## TODO 
+
+- [ ] HTTP server
+- [ ] protobuf
+- [ ] protorpc  
+
 ## License
 
 MIT License 
