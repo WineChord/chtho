@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../lib/libchtho_base.a  CMakeFiles/chtho_base.dir/noncopyable.cpp.o
-/usr/bin/ranlib ../../lib/libchtho_base.a

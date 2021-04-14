@@ -1,1 +1,0 @@
-g++   -g -Wall -std=c++11 -pthread -Wno-unused-parameter -DCHTHO_COLORED -Og   CMakeFiles/eventloopthreadpool_test.dir/EventLoopThreadPool_test.cpp.o  -o ../../../bin/eventloopthreadpool_test -rdynamic ../../../lib/libchtho_net.a ../../../lib/libchtho_logging.a ../../../lib/libchtho_base.a ../../../lib/libchtho_time.a ../../../lib/libchtho_threads.a -lpthread 

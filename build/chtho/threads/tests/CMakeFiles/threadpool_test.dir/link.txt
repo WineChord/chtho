@@ -1,1 +1,0 @@
-g++   -g -Wall -std=c++11 -pthread -Wno-unused-parameter -DCHTHO_COLORED -Og   CMakeFiles/threadpool_test.dir/ThreadPool_test.cpp.o  -o ../../../bin/threadpool_test -rdynamic ../../../lib/libchtho_threads.a ../../../lib/libchtho_logging.a ../../../lib/libchtho_base.a -lpthread ../../../lib/libchtho_time.a 

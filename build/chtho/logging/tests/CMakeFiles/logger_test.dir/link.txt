@@ -1,1 +1,0 @@
-g++   -g -Wall -std=c++11 -pthread -Wno-unused-parameter -DCHTHO_COLORED -Og   CMakeFiles/logger_test.dir/Logger_test.cpp.o  -o ../../../bin/logger_test -rdynamic ../../../lib/libchtho_logging.a ../../../lib/libchtho_threads.a ../../../lib/libchtho_base.a ../../../lib/libchtho_time.a -lpthread 
