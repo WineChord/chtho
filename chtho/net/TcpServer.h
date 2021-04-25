@@ -48,6 +48,8 @@ public:
   ~TcpServer();
 
   void start(); 
+  const std::string& name() const { return name_; }
+  const std::string& ipPort() const { return ipPort_; }
 
   // 0: all IO is in loop's thread
   // 1: all IO is in another thread

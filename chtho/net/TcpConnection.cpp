@@ -275,6 +275,22 @@ void TcpConnection::sendInLoop(const void* data, size_t len)
   }
 }
 
+void TcpConnection::send(Buffer* buf)
+{
+  if(state_ == State::Connected)
+  {
+    if(loop_->isInLoopThread())
+    {
+      sendInLoop(buf->peek(), buf->readableBytes());
+      buf->retrieveAll();
+    }
+    else  
+    {
+      loop_->runInLoop([this,buf](){this->sendInLoop(buf->retrieveAllAsString());});
+    }
+  }
+}
+
 void TcpConnection::send(const StringPiece& msg)
 {
   if(state_ == State::Connected)

@@ -9,6 +9,7 @@ namespace chtho
 {
 namespace net
 {
+const char Buffer::CRLF[] = "\r\n";
   
 // readFd will read data from the file descriptor
 // to Buffer::buf_ 

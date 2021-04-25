@@ -22,3 +22,4 @@ add_library(chtho_net ${net_SRCS})
 target_link_libraries(chtho_net chtho_logging chtho_threads)
 
 add_subdirectory(tests)
+add_subdirectory(http)

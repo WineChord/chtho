@@ -73,6 +73,7 @@ public:
   void forceClose();
   void forceCloseInLoop();
 
+  void send(Buffer* buf);
   void send(const StringPiece& msg);
   void sendInLoop(const StringPiece& msg);
   void sendInLoop(const void* data, size_t len);

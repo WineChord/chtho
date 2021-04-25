@@ -36,6 +36,7 @@ TcpServer::TcpServer(EventLoop* loop, const InetAddr& listenAddr,
     threadPool_(new EventLoopThreadPool(loop, name_)),
     connCB_(defaultConnCB),
     msgCB_(defaultMsgCB),
+    started_(0),
     nxtConnID_(1)
 {
   auto f = [this](int sockfd, const InetAddr& peerAddr){

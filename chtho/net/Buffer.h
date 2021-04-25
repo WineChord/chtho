@@ -9,6 +9,7 @@
 #include "base/StringPiece.h"
 
 #include <vector>
+#include <algorithm>
 
 #include <assert.h> 
 #include <arpa/inet.h>
@@ -26,6 +27,8 @@ private:
   std::vector<char> buf_;
   size_t readerIdx_;
   size_t writerIdx_;
+
+  static const char CRLF[];
 
   char* begin() { return &*buf_.begin(); }
   const char* begin() const { return &*buf_.begin(); }
@@ -150,6 +153,7 @@ public:
   }
 
   void retrieveAll() { readerIdx_=writerIdx_=kPre; }
+  void retrieveUntil(const char* end) { retrieve(end - peek()); }
 
   void retrieve(size_t len)
   {
@@ -199,6 +203,12 @@ public:
     assert(start <= writePtr());
     const void* eol = memchr(start, '\n', writePtr()-start);
     return static_cast<const char*>(eol);
+  }
+
+  const char* findCRLF() const 
+  {
+    const char* crlf = std::search(peek(), writePtr(), CRLF, CRLF+2);
+    return crlf == writePtr() ? NULL : crlf;
   }
 
   ssize_t readFd(int fd, int* savedErrno);
