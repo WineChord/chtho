@@ -55,7 +55,7 @@ int main(int argc, char const *argv[])
 {
   int numThreads = 0, port = 8080;
   if(argc > 1){
-    Logger::setLogLevel(Logger::Level::DEBUG);
+    // Logger::setLogLevel(Logger::Level::DEBUG);
     numThreads = atoi(argv[1]);
     if(argc > 2) port = atoi(argv[2]); 
   } 

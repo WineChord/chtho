@@ -29,6 +29,8 @@ Logger::Level initLogLevel()
     return Logger::Level::TRACE;
   if(::getenv("CHTHO_LOG_DEBUG"))
     return Logger::Level::DEBUG;
+  if(::getenv("CHTHO_LOG_FATAL"))
+    return Logger::Level::FATAL;
   return Logger::Level::INFO;
 }
 // global veriable set for log level
